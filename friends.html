@@ -7,12 +7,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  归档 |    发明家小站</title>
+  <title>友链|发明家小站</title>
   <meta name="description" content="发明家的小站 powered by hexo">
   <!-- 标签页图标 -->
-  
+ 
   <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
-  
+  <!-- 友链css -->
+  <style>
+  .friends {
+    display: flex;
+    flex-wrap: wrap;
+}
+.friends .a-friend {
+    display: flex;
+    margin: 10px 10px 0 0;
+    text-decoration: none;
+    font-weight: 300;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.friends .a-friend:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.friends .a-friend:active {
+    transform: scale(0.95);
+}
+.friends .a-friend .blog-avatar {
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.friends .a-friend .text-container {
+    margin-left: 10px;
+}
+.friends .a-friend .text-container .name {
+    font-size: 28px;
+}
+.friends .a-friend .text-container .description {
+    font-size: 24px;
+    margin-top: 5px;
+}
+  </style>
 
   <!-- 图标库 -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -111,23 +148,27 @@
 
 
 </div>
-
-<div class="body-outer">
-  <div class="body-inner">
-    
-
-    <section class="archive-outer">
+<section class="archive-outer">
+<section class="archive-outer">
+     <section class="archive-outer">
     <section class="archive-inner">
-        
-     <a href="https://elstec.cn"><center><h2>节操</h2></center></a>
-        
-        
-    </section>
-</section>
 
 
-  </div>
-</div>
+      <div class="friends">
+    <a class="a-friend" target="_blank" style="background-color:white;color:black" href="https://elstec.cn">
+        <img class="blog-avatar" src="https://cdn.elstec.cn/tx/1.jpg">
+        <div class="text-container">
+            <div class="name">节操</div>
+            <div class="description">永远年轻，永远热泪盈眶</div>
+        </div>
+    </a>
+   </div>
+   </section>
+   </section>
+   </section>
+   </section>
+
+
 
 
 
@@ -164,15 +205,6 @@
     </div>
     </div>
 </div>
-
-
-
-
-
-
 <script src="/js/white.js"></script>
-
-
-
 </body>
 </html>
