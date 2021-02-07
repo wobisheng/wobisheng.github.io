@@ -61,9 +61,8 @@ else if(number1 == 9)
 {document.write("有时候，最痛苦的不是失去，而是得到以后并不快乐。");}
 else if(number1 == 10)
 {document.write("不尝试着做些能力之外的事情，就永远无法成长。");}
-
-		  </script>
-        </a>
+        </script>
+		</a>
       </div>
       <div class="menu-group">
         <ul class="menu-ul">
@@ -227,7 +226,14 @@ else if(number1 == 10)
     <div class="footer-text">
     <p>Power by <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a> Theme by <a target="_blank" rel="noopener" href="https://github.com/FuShaoLei/hexo-theme-white">White</a> this is a blog of <a target="_blank" rel="noopener" href="http://wobisheng.top/">发明家</a></p>
 
-    </div>
+	<script>
+	var date = Date.parse(new Date());
+date = ((date/1000)-1484849009)/(24*3600);
+var year = Date.parse(new Date());
+year = year/(31536000000) + 1970;
+     document.write("博客已运行了" + parseInt(date) + "天 copyright发明家" + parseInt(year));
+    </script>
+	</div>
     <div class="footer-contact">
     <ul class="footer-ul">
         
