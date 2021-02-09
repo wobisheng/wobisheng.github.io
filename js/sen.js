@@ -9,7 +9,7 @@ else if(number1 == 3)
 else if(number1 == 4)
 {document.getElementById("sentence").innerHTML="人间不会有单纯的快乐，快乐总夹杂着烦恼和忧虑，人间也没有永远";}
 else if(number1 == 5)
-{document.getElementById("sentence").innerHTML="珍惜身体，多锻炼，早睡早起，不停学习，不停旅行，即使腿脚未在路上，也要让心在路上";}
+{document.getElementById("sentence").innerHTML="错落一身静宁，深海浮沉摘星";}
 else if(number1 == 6)
 {document.getElementById("sentence").innerHTML="就这样与你告别，借万里青山，以之为隔，世世不见。";}
 else if(number1 == 7)
