@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>天边轻云</title>
+    <url>/2020/06/06/%E5%A4%A9%E8%BE%B9%E8%BD%BB%E4%BA%91/</url>
+    <content><![CDATA[<p>好久好久没写博客，现在的我已经上大学了。<br>犹记得，那年，我初三，刚开始写博客，热情似火，想把生活的一切都搬到博客上来<br>时至今日，我早已没有了当时的热情，也没有了空闲的时间<br>我是一名医学生<br>学业和生活逐渐吞噬了我自己的时光，我变得被动而又没有希望，没有希望在网上可以拥有自己的一片小天地<br>经过了那么长的时间，再次打开vs，熟悉的C艹发现，自己连头文件都忘了怎么写<br>匆匆的，打开淘宝，买了一本算法书搁置了一个星期也没有来得及看<br>基础化学，医用高等数学，医用物理学，大学英语，社团活动，组织班级班会，无时无刻不在吞噬着我的时光<br>转眼，期末了<br>希望在来年可以看见我自己的进步</p>
+]]></content>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>岁月神偷</title>
     <url>/2021/02/06/%E5%B2%81%E6%9C%88%E7%A5%9E%E5%81%B7/</url>
     <content><![CDATA[<h2 id="措不及防的是时间"><a href="#措不及防的是时间" class="headerlink" title="措不及防的是时间"></a>措不及防的是时间</h2><p>好久好久又没有写博客了，<br>转眼间时间又过去了大半年，<br>想了想之前租的一年的学生机也快到期了，<br>与其这样浪费钱倒不如在github pages上写点东西(哈哈哈哈毕竟是免费的）</p>
@@ -14,15 +23,48 @@
   <entry>
     <title>给自己的博客加点料</title>
     <url>/2021/02/09/%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8A%A0%E7%82%B9%E6%96%99/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>天边轻云</title>
-    <url>/2020/06/06/%E5%A4%A9%E8%BE%B9%E8%BD%BB%E4%BA%91/</url>
-    <content><![CDATA[<p>好久好久没写博客，现在的我已经上大学了。<br>犹记得，那年，我初三，刚开始写博客，热情似火，想把生活的一切都搬到博客上来<br>时至今日，我早已没有了当时的热情，也没有了空闲的时间<br>我是一名医学生<br>学业和生活逐渐吞噬了我自己的时光，我变得被动而又没有希望，没有希望在网上可以拥有自己的一片小天地<br>经过了那么长的时间，再次打开vs，熟悉的C艹发现，自己连头文件都忘了怎么写<br>匆匆的，打开淘宝，买了一本算法书搁置了一个星期也没有来得及看<br>基础化学，医用高等数学，医用物理学，大学英语，社团活动，组织班级班会，无时无刻不在吞噬着我的时光<br>转眼，期末了<br>希望在来年可以看见我自己的进步</p>
+    <content><![CDATA[<h2 id="给自己的博客加点料"><a href="#给自己的博客加点料" class="headerlink" title="给自己的博客加点料"></a>给自己的博客加点料</h2><p>今天有点无聊，看着博客感觉缺了点什么，想了想便感觉应该加一个随机句子推荐，这样可以让博客更有一点文艺气息，但是，众所周知，Github Pages是不支持php的，但这也无妨，javascript依然可以做到相同的效果，但是本人拙劣的写代码技术于编译器后面了(哈哈哈哈哈哈)。</p>
+<h3 id="第一步-寻找添加句子的区域"><a href="#第一步-寻找添加句子的区域" class="headerlink" title="第一步 寻找添加句子的区域"></a>第一步 寻找添加句子的区域</h3><p>首先打开hexo博客的自定义文件夹(这里以我用的white主题为例)，找到themes/(你的主题名)/layout/_partial接着找到header.ejs(footer也可以)用你自己的编辑器打开</p>
+<h3 id="第二步-添加代码"><a href="#第二步-添加代码" class="headerlink" title="第二步 添加代码"></a>第二步 添加代码</h3><p>找到博客顶部名字的区域，尝试加一个新的段落</p>
+<pre><code>&lt;div&gt;
+........
+&lt;p id=&quot;sentence&quot;&gt;测试&lt;/p&gt;
+&lt;script src=&quot;/js/sen.js&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+</code></pre>
+<p>在本地生成博客，自己观察，区域是不是合适，如果不合适，可以自己写一点style调整</p>
+<h3 id="第三步-写js代码"><a href="#第三步-写js代码" class="headerlink" title="第三步 写js代码"></a>第三步 写js代码</h3><p>这里你们可以直接引用我的，就是在上述的script src=””里面把””里面改成<a href="https://wobisheng.github.io/js/sen.js">https://wobisheng.github.io/js/sen.js</a> 就可以了</p>
+<p>当然你也可以自己写一点点代码放在主题的source/js文件夹里命名为sen.js</p>
+<p>下面是具体代码(别在意我拙劣的代码技术)</p>
+<pre><code>var number1 = Math.floor(Math.random() * 11);
+number1 = number1 + 1;
+if(number1 == 1)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;这城市风很大，孤独的人总是晚回家&quot;;&#125;
+else if(number1 == 2)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;我们都生活在阴沟里，但仍有人仰望星空&quot;;&#125;
+else if(number1 == 3)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;曾经以为，拥有是不容易的；后来才知道，原来舍弃更难。&quot;;&#125;
+else if(number1 == 4)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;人间不会有单纯的快乐，快乐总夹杂着烦恼和忧虑，人间也没有永远&quot;;&#125;
+else if(number1 == 5)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;珍惜身体，多锻炼，早睡早起，不停学习，不停旅行，即使腿脚未在路上，也要让心在路上&quot;;&#125;
+else if(number1 == 6)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;就这样与你告别，借万里青山，以之为隔，世世不见。&quot;;&#125;
+else if(number1 == 7)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;有一种感觉比失恋还要痛苦，叫做自作多情。&quot;;&#125;
+else if(number1 == 8)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;活着不一定要鲜艳，但一定要有自己的颜色&quot;;&#125;
+else if(number1 == 9)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;有时候，最痛苦的不是失去，而是得到以后并不快乐。&quot;;&#125;
+else if(number1 == 10)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;不尝试着做些能力之外的事情，就永远无法成长。&quot;;&#125;
+else if(number1 == 11)
+&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;外界事物纷至沓来，我敞开所有感官来接纳，但来者全是客&quot;;&#125;
+</code></pre>
+<p>就那么多啦，谢谢大家</p>
 ]]></content>
       <tags>
-        <tag>日记</tag>
+        <tag>博客技术</tag>
       </tags>
   </entry>
 </search>
