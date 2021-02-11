@@ -165,6 +165,6 @@ setTimeout(function (){
 setTimeout(function (){
 		explode();},16500);
 setTimeout(function (){
-	createText("偲❤明");},17500);
+	createText("偲♥明");},17500);
 	};
 })();
