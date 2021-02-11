@@ -15,10 +15,10 @@
     // Init Canvas
     function initStages() {
         offsetX = (window.innerWidth-600)/2;
-        offsetY = (window.innerHeight-300)/2;
+        offsetY = (window.innerHeight-200)/2;
         textStage = new createjs.Stage("text");
-        textStage.canvas.width = 600;
-        textStage.canvas.height = 200;
+        textStage.canvas.width = 900;
+        textStage.canvas.height = 300;
 
         stage = new createjs.Stage("stage");
         stage.canvas.width = window.innerWidth;
@@ -27,16 +27,16 @@
 
 
     function initText() {
-        text = new createjs.Text("t", "90px 'Source Sans Pro'", "#eee");
+        text = new createjs.Text("t", "120px 'Source Sans Pro'", "#eee");
         text.textAlign = 'center';
-        text.x = 300;
+        text.x = 500;
     }
 
     function initCircles() {
         circles = [];
         for(var i=0; i<700; i++) {
             var circle = new createjs.Shape();
-            var r = 7;
+            var r = 10;
             var x = window.innerWidth*Math.random();
             var y = window.innerHeight*Math.random();
             var color = colors[Math.floor(i%colors.length)];
@@ -63,7 +63,7 @@
     function tweenCircle(c, dir) {
         if(c.tween) c.tween.kill();
         if(dir == 'in') {
-            c.tween = TweenLite.to(c, 0.8, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
+            c.tween = TweenLite.to(c, 0.6, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
                 c.movement = 'jiggle';
                 tweenCircle(c);
             }});
@@ -165,6 +165,6 @@ setTimeout(function (){
 setTimeout(function (){
 		explode();},16500);
 setTimeout(function (){
-	createText("偲♥明");},17500);
+	createText("偲&明");},17500);
 	};
 })();
