@@ -161,7 +161,7 @@ setTimeout(function (){
   setTimeout(function (){
 		explode();},13500);
 setTimeout(function (){
-	createText(parseInt(date).toString(10)+"天❤");},14500);
+	createText(parseInt(date).toString(10)+"天");},14500);
 setTimeout(function (){
 		explode();},16500);
 setTimeout(function (){
