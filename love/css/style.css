@@ -1,0 +1,8 @@
+body {
+  background: #eee;
+}
+
+* {
+  position: absolute;
+  margin: 0; padding: 0;
+}
