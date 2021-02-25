@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  给自己的博客加点料 |    发明家小站</title>
+  <title>  35mm定焦cctv监控头体验 |    发明家小站</title>
   <meta name="description" content="发明家的小站 powered by hexo">
   <!-- 标签页图标 -->
   
@@ -136,8 +136,8 @@
 <article class="post-inner">
   <div class="post-content-outer">
     <div class="post-intro">
-      <div class="post-title animate__animated  animate__fadeInUp">给自己的博客加点料</div>
-      <div class="meta-intro animate__animated  animate__fadeInUp">Feb 09 2021</div>
+      <div class="post-title animate__animated  animate__fadeInUp">35mm定焦cctv监控头体验</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">Feb 25 2021</div>
       
     </div>
     <div class="post-content-inner">
@@ -147,53 +147,92 @@
       <div class="post-content-main animate__animated  animate__fadeInUp">
         <!-- top型目录 -->
         
-        <h3 id="给自己的博客加点料"><a href="#给自己的博客加点料" class="headerlink" title="给自己的博客加点料"></a>给自己的博客加点料</h3><p>今天有点无聊，看着博客感觉缺了点什么，想了想便感觉应该加一个随机句子推荐，这样可以让博客更有一点文艺气息，但是，众所周知，Github Pages是不支持php的，但这也无妨，javascript依然可以做到相同的效果，但是本人拙劣的写代码技术于编译器后面了(哈哈哈哈哈哈)。</p>
-<h2 id="第一步-寻找添加句子的区域"><a href="#第一步-寻找添加句子的区域" class="headerlink" title="第一步 寻找添加句子的区域"></a>第一步 寻找添加句子的区域</h2><p>首先打开hexo博客的自定义文件夹(这里以我用的white主题为例)，找到themes/(你的主题名)/layout/_partial接着找到header.ejs(footer也可以)用你自己的编辑器打开</p>
-<h2 id="第二步-添加代码"><a href="#第二步-添加代码" class="headerlink" title="第二步 添加代码"></a>第二步 添加代码</h2><p>找到博客顶部名字的区域，尝试加一个新的段落</p>
-<pre><code>&lt;div&gt;
-........
-&lt;p id=&quot;sentence&quot;&gt;测试&lt;/p&gt;
-&lt;script src=&quot;/js/sen.js&quot;&gt;&lt;/script&gt;
-&lt;/div&gt;
-</code></pre>
-<p>在本地生成博客，自己观察，区域是不是合适，如果不合适，可以自己写一点style调整</p>
-<h2 id="第三步-写js代码"><a href="#第三步-写js代码" class="headerlink" title="第三步 写js代码"></a>第三步 写js代码</h2><p>这里你们可以直接引用我的，就是在上述的script src=””里面把””里面改成<a target="_blank" rel="noopener" href="https://wobisheng.github.io/js/sen.js">https://wobisheng.github.io/js/sen.js</a> 就可以了</p>
-<p>当然你也可以自己写一点点代码放在主题的source/js文件夹里命名为sen.js</p>
-<p>下面是具体代码(别在意我拙劣的代码技术)</p>
-<pre><code>var number1 = Math.floor(Math.random() * 11);
-number1 = number1 + 1;
-if(number1 == 1)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;这城市风很大，孤独的人总是晚回家&quot;;&#125;
-else if(number1 == 2)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;我们都生活在阴沟里，但仍有人仰望星空&quot;;&#125;
-else if(number1 == 3)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;曾经以为，拥有是不容易的；后来才知道，原来舍弃更难。&quot;;&#125;
-else if(number1 == 4)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;人间不会有单纯的快乐，快乐总夹杂着烦恼和忧虑，人间也没有永远&quot;;&#125;
-else if(number1 == 5)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;珍惜身体，多锻炼，早睡早起，不停学习，不停旅行，即使腿脚未在路上，也要让心在路上&quot;;&#125;
-else if(number1 == 6)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;就这样与你告别，借万里青山，以之为隔，世世不见。&quot;;&#125;
-else if(number1 == 7)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;有一种感觉比失恋还要痛苦，叫做自作多情。&quot;;&#125;
-else if(number1 == 8)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;活着不一定要鲜艳，但一定要有自己的颜色&quot;;&#125;
-else if(number1 == 9)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;有时候，最痛苦的不是失去，而是得到以后并不快乐。&quot;;&#125;
-else if(number1 == 10)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;不尝试着做些能力之外的事情，就永远无法成长。&quot;;&#125;
-else if(number1 == 11)
-&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;外界事物纷至沓来，我敞开所有感官来接纳，但来者全是客&quot;;&#125;
-</code></pre>
-<p>就那么多啦，谢谢大家</p>
-<p>2月16日更新</p>
-<p>看了LOGI大佬的评论，发现我还是短浅了，也没有代码优化意识</p>
-<p>如果直接建立一个常量数组，那代码的效率会提升不少</p>
-<p>而且可以直接在后面添加新的内容，不用去改前面的数字，很方便</p>
-<p>代码如下</p>
-<pre><code>const sentences = [&quot;这城市风很大，孤独的人总是晚回家&quot;, &quot;我们都生活在阴沟里，但仍有人仰望星空&quot;,&quot;曾经以为，拥有是不容易的；后来才知道，原来舍弃更难。&quot;,&quot;人间不会有单纯的快乐，快乐总夹杂着烦恼和忧虑，人间也没有永远&quot;,&quot;错落一身静宁，深海浮沉摘星&quot;,&quot;就这样与你告别，借万里青山，以之为隔，世世不见。&quot;,&quot;有一种感觉比失恋还要痛苦，叫做自作多情。&quot;,&quot;活着不一定要鲜艳，但一定要有自己的颜色&quot;,&quot;有时候，最痛苦的不是失去，而是得到以后并不快乐。&quot;,&quot;不尝试着做些能力之外的事情，就永远无法成长&quot;,&quot;外界事物纷至沓来，我敞开所有感官来接纳，但来者全是客&quot;];
-document.getElementById(&quot;sentence&quot;).innerHTML = sentences[Math.floor(Math.random() * sentences.length)];
-</code></pre>
+        <h1 id="35mm-cctv监控头体验"><a href="#35mm-cctv监控头体验" class="headerlink" title="35mm cctv监控头体验"></a>35mm cctv监控头体验</h1><p>新的一年已经过去了，当然要好好奖励一下自己，随意翻着淘宝，想给自己看一个合适的E口头，转了半天，也没找到什么合适的</p>
+<p>18-105 f4 95新 2450</p>
+<p>18-135 f3.5-5.6 95新 2480</p>
+<p>55-210 f4.5-f6.3 95新 700</p>
+<p>突然看见了 35 f1.6 cctv 全新 120 就冲这个价格，买回来玩玩也可以，下单付钱，一气呵成</p>
+<h2 id="0-收货"><a href="#0-收货" class="headerlink" title="0.收货"></a>0.收货</h2><p>镜头的外观很漂亮，黑色的镜头很有质感，先过一遍外观</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/6037402f5f4313ce25e0c9ba.jpg" >
+        </sapn>
+      </p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/6037402f5f4313ce25e0c9d1.jpg" >
+        </sapn>
+      </p>
+<h2 id="1-试拍"><a href="#1-试拍" class="headerlink" title="1.试拍"></a>1.试拍</h2><p>因为是全手动头，光圈环和对焦环都是需要自己调节的，阻尼的大小也不错，拧起来很舒服，如果不是知道他的价格，仅凭外观很难想象这只是一颗100多块钱的头</p>
+<p>不加对焦环，最近对焦距离为0.5米，实测感觉差不多，打开相机，打开峰值对焦，峰值水平高，关掉检测镜头拍照，愉快的拍摄时间开始</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/6037402f5f4313ce25e0c9c4.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>35mm f1.6 cctv iso100 1/200s (图片经过一些调色处理) </p>
+</blockquote>
+<p>在拍摄近景时，这颗头的表现还算不错，但是当把注意力转移到边缘的时候可以发现散焦区域有很明显的偏移，边缘画质欠佳，仔细观察中心，在焦平面的画质还算看得过去，如果抛开边缘画质不说，背景的奶化也挺不错，但是当拍摄画面为大场景时，如下图</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60373f8a5f4313ce25dfb333.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>35mm f1.6 cctv iso200 1/2500s (图片经过一些调色处理) </p>
+</blockquote>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60373fc35f4313ce25e01a41.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>35mm f1.6 cctv iso100 1/2500s (图片经过一些调色处理)</p>
+</blockquote>
+<p>就可以很明显的看出边缘基本不能用，猛一看反而有一种移轴的味道，倒是也别有一番风味，当拍摄近距离物体时，如果不开最大光圈，猛一看真的看不出来边缘极差的画质，下面是一些样片</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60373fc55f4313ce25e01c2e.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>35mm f2 cctv iso200 1/4000s (图片经过一些调色处理) </p>
+</blockquote>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60373fbf5f4313ce25e012bc.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>35mm f1.6 cctv iso200 1/1000s (图片经过一些调色处理)</p>
+</blockquote>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60373fc75f4313ce25e01eba.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>35mm f2 cctv iso200 1/1000s (图片经过一些调色处理)</p>
+</blockquote>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60374af75f4313ce25f05bbc.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>35mm f2 cctv iso100 1/250s (图片经过一些调色处理)</p>
+</blockquote>
+<h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的画质确实不是很好，但是在这个价位体验大光圈的乐趣还是足够了的，看看这100多块钱的价格，咦，画质怎么突然变好了呢</p>
 
         <!-- 分类文章 -->
         
@@ -201,7 +240,7 @@ document.getElementById(&quot;sentence&quot;).innerHTML = sentences[Math.floor(M
       <div class="post-content-inner-space">
         
           <div class="space-toc-main animate__animated  animate__fadeInUp">
-            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5-%E5%AF%BB%E6%89%BE%E6%B7%BB%E5%8A%A0%E5%8F%A5%E5%AD%90%E7%9A%84%E5%8C%BA%E5%9F%9F"><span class="space-toc-text">第一步 寻找添加句子的区域</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5-%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%A0%81"><span class="space-toc-text">第二步 添加代码</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5-%E5%86%99js%E4%BB%A3%E7%A0%81"><span class="space-toc-text">第三步 写js代码</span></a></li></ol>
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#0-%E6%94%B6%E8%B4%A7"><span class="space-toc-text">0.收货</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#1-%E8%AF%95%E6%8B%8D"><span class="space-toc-text">1.试拍</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#2-%E6%80%BB%E7%BB%93"><span class="space-toc-text">2.总结</span></a></li></ol>
            </div>
         
       </div>
