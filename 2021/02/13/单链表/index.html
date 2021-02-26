@@ -240,6 +240,9 @@ int main()
 &#125;
 </code></pre>
 <p>有一些问题我记下来以后解决<br>1.初始化函数ini()无法以&amp;plist = (list*)malloc(sizeof(list));代替<br>2.pnode的原来的内存空间如果没有指针指向但是记住地址会不会被系统回收</p>
+<p>问题一已经解决了，应该是plist = (list*)malloc(sizeof(list));因为plist本来就是结构指针，</p>
+<p>指向一个结构体，应该是让他指向一个结构体，而&amp;plist是plist的地址，</p>
+<p>只是一个指针指向结构体的起始位置，当然不能修改他自己的地址。</p>
 
         <!-- 分类文章 -->
         
