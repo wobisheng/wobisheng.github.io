@@ -1,6 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>55-210长焦镜头体验</title>
+    <url>/2021/04/10/55-210%E9%95%BF%E7%84%A6%E9%95%9C%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="55-210平民狗头体验"><a href="#55-210平民狗头体验" class="headerlink" title="55-210平民狗头体验"></a>55-210平民狗头体验</h1><blockquote>
+<p>这些日子特别想要一个长焦，但是E口的镜头一般不便宜，nex转接环加性价比较高的美能达是一个不错的选择，但是美能达毕竟是老镜头，18-105或者18-135即使在二手平台上也不便宜，18-200确实便宜，但是已经有18-55了，仔细对比还是55-210最香，价格也只是18-200的一半，虽然大家都说画质肉，但是其作为原生E口长焦，和600的价格实在是很香了。</p>
+</blockquote>
+<h2 id="0-开箱"><a href="#0-开箱" class="headerlink" title="0.开箱"></a>0.开箱</h2><p>先看看外观</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd78322e6675c5c77e1.jpg" >
+        </sapn>
+      </p>
+<p>整个镜头的大小不算小，加上遮光罩有20厘米左右，银色的镜头没有黑色的好看，但是价格却比黑色的便宜不少，实用主义者还是选择银色好点</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fa.jpg" >
+        </sapn>
+      </p>
+<p>镜头不是恒定光圈，最大光圈f4.5，支持光学防抖，焦段55-210，等效83-315，废话就不多说了，参数网上都有，下面来看看样片</p>
+<h2 id="1-样片"><a href="#1-样片" class="headerlink" title="1.样片"></a>1.样片</h2><p>首先来看看中老年人摄影</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fd.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/200    ISO:200    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>总的来讲210焦段能在这个水平，还是很不错的，不放大看细节，总体很完美，但是仔细看会发现月球的细节基本看不见，边缘色散有些严重，对得起600的价格</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7603.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/5.6    曝光时间:1/800    ISO:200    焦段:142 图片经过后期处理</p>
+</blockquote>
+<p>这张照片我自认为拍的挺好的，55-210这个头在中焦段的表现还是不错的，焦外奶化也还可以，焦内虽说不能和G头比但是还算锐利</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c760b.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>这张焦外就挺完美的虽说是f/6.3的光圈，但是在210焦段景深就非常完美了，但是仔细看边缘，色散还是较为严重</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7615.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>老年人打鸟，效果还不错</p>
+<h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的性价比还是挺不错的，是一个对于索尼E口相机练手的长焦镜头，即使以后要换镜头，出掉倒也不心疼.</p>
+]]></content>
+      <tags>
+        <tag>体验,评测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python日记</title>
+    <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
+<p>写了一个可以对服务器发送post请求的小程序</p>
+<pre><code class="python">import urllib
+import urllib.request
+
+def sendpost(url):
+    head = &#123;
+        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;
+        &#125;
+    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)
+    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)
+    response = urllib.request.urlopen(request)
+    print(response.read())
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p>
+<p>下面是基于requests库编写的功能差不多的小程序</p>
+<pre><code class="python">import requests
+
+def sendpost(url):
+    head=&#123;
+    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+    &#125;
+    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;
+    try:
+        request = requests.post(url=url,headers=head,data=data)
+        print(request.content)
+    except Exception:
+        print(&quot;error&quot;,end=&quot;\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>
+]]></content>
+      <tags>
+        <tag>程序,python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>35mm定焦cctv监控头体验</title>
     <url>/2021/02/25/35mm%E5%AE%9A%E7%84%A6cctv%E7%9B%91%E6%8E%A7%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
     <content><![CDATA[<h1 id="35mm-cctv监控头体验"><a href="#35mm-cctv监控头体验" class="headerlink" title="35mm cctv监控头体验"></a>35mm cctv监控头体验</h1><p>新的一年已经过去了，当然要好好奖励一下自己，随意翻着淘宝，想给自己看一个合适的E口头，转了半天，也没找到什么合适的</p>
@@ -89,74 +202,6 @@
 <p>35mm f2 cctv iso100 1/250s (图片经过一些调色处理)</p>
 </blockquote>
 <h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的画质确实不是很好，但是在这个价位体验大光圈的乐趣还是足够了的，看看这100多块钱的价格，咦，画质怎么突然变好了呢</p>
-]]></content>
-      <tags>
-        <tag>体验,评测</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>55-210长焦镜头体验</title>
-    <url>/2021/04/10/55-210%E9%95%BF%E7%84%A6%E9%95%9C%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="55-210平民狗头体验"><a href="#55-210平民狗头体验" class="headerlink" title="55-210平民狗头体验"></a>55-210平民狗头体验</h1><blockquote>
-<p>这些日子特别想要一个长焦，但是E口的镜头一般不便宜，nex转接环加性价比较高的美能达是一个不错的选择，但是美能达毕竟是老镜头，18-105或者18-135即使在二手平台上也不便宜，18-200确实便宜，但是已经有18-55了，仔细对比还是55-210最香，价格也只是18-200的一半，虽然大家都说画质肉，但是其作为原生E口长焦，和600的价格实在是很香了。</p>
-</blockquote>
-<h2 id="0-开箱"><a href="#0-开箱" class="headerlink" title="0.开箱"></a>0.开箱</h2><p>先看看外观</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd78322e6675c5c77e1.jpg" >
-        </sapn>
-      </p>
-<p>整个镜头的大小不算小，加上遮光罩有20厘米左右，银色的镜头没有黑色的好看，但是价格却比黑色的便宜不少，实用主义者还是选择银色好点</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fa.jpg" >
-        </sapn>
-      </p>
-<p>镜头不是恒定光圈，最大光圈f4.5，支持光学防抖，焦段55-210，等效83-315，废话就不多说了，参数网上都有，下面来看看样片</p>
-<h2 id="1-样片"><a href="#1-样片" class="headerlink" title="1.样片"></a>1.样片</h2><p>首先来看看中老年人摄影</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fd.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/200    ISO:200    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>总的来讲210焦段能在这个水平，还是很不错的，不放大看细节，总体很完美，但是仔细看会发现月球的细节基本看不见，边缘色散有些严重，对得起600的价格</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7603.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/5.6    曝光时间:1/800    ISO:200    焦段:142 图片经过后期处理</p>
-</blockquote>
-<p>这张照片我自认为拍的挺好的，55-210这个头在中焦段的表现还是不错的，焦外奶化也还可以，焦内虽说不能和G头比但是还算锐利</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c760b.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>这张焦外就挺完美的虽说是f/6.3的光圈，但是在210焦段景深就非常完美了，但是仔细看边缘，色散还是较为严重</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7615.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>老年人打鸟，效果还不错</p>
-<h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的性价比还是挺不错的，是一个对于索尼E口相机练手的长焦镜头，即使以后要换镜头，出掉倒也不心疼.</p>
 ]]></content>
       <tags>
         <tag>体验,评测</tag>
@@ -276,23 +321,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>岁月神偷</title>
-    <url>/2021/02/06/%E5%B2%81%E6%9C%88%E7%A5%9E%E5%81%B7/</url>
-    <content><![CDATA[<h2 id="措不及防的是时间"><a href="#措不及防的是时间" class="headerlink" title="措不及防的是时间"></a>措不及防的是时间</h2><p>好久好久又没有写博客了，<br>转眼间时间又过去了大半年，<br>想了想之前租的一年的学生机也快到期了，<br>与其这样浪费钱倒不如在github pages上写点东西(哈哈哈哈毕竟是免费的）</p>
-<p>哎，时间是真的很快，有时候其实想写写博客的，<br>但是打开网站却又不知道该写点什么，看着对话框发呆，<br>这新的一年马上又要开始了。</p>
-<p>希望可以在新的一年里可以好好写博客吧，<br>哈哈哈哈哈，从2016年到现在都快5年了，<br>换了好几家服务器供应商，还是没坚持下来<br>加油吧，我们</p>
-]]></content>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>开学了</title>
-    <url>/2021/03/06/%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
-    <content><![CDATA[<h1 id="开学了"><a href="#开学了" class="headerlink" title="开学了"></a>开学了</h1><p>2021年3月，已经是大一下学期了，这一学期的事情有点多，但是经过了大一上学期的磨练，我已经有些许适应了大学的生活，新学期加油吧</p>
-]]></content>
-  </entry>
-  <entry>
     <title>山丹丹花开花又落，一年又一年</title>
     <url>/2021/02/13/%E5%B1%B1%E4%B8%B9%E4%B8%B9%E8%8A%B1%E5%BC%80%E8%8A%B1%E5%8F%88%E8%90%BD%EF%BC%8C%E4%B8%80%E5%B9%B4%E5%8F%88%E4%B8%80%E5%B9%B4/</url>
     <content><![CDATA[<blockquote>
@@ -304,6 +332,23 @@ int main()
 <p>唉，我仅仅是一个沙砾在岁月洪流中浮浮沉沉罢了</p>
 <p>想起来《寻梦环游记》里引用《生命的清单》里的几句话，我认为可以作为结尾</p>
 <h6 id="第一次，当你的心跳停止，呼吸消逝，你在生物学上被宣告了死亡。"><a href="#第一次，当你的心跳停止，呼吸消逝，你在生物学上被宣告了死亡。" class="headerlink" title="第一次，当你的心跳停止，呼吸消逝，你在生物学上被宣告了死亡。"></a>第一次，当你的心跳停止，呼吸消逝，你在生物学上被宣告了死亡。</h6><h6 id="第二次，当你下葬，人们穿着黑衣出席你的葬礼，他们宣告，你在这个社会上不复存在，你悄然离去。"><a href="#第二次，当你下葬，人们穿着黑衣出席你的葬礼，他们宣告，你在这个社会上不复存在，你悄然离去。" class="headerlink" title="第二次，当你下葬，人们穿着黑衣出席你的葬礼，他们宣告，你在这个社会上不复存在，你悄然离去。"></a>第二次，当你下葬，人们穿着黑衣出席你的葬礼，他们宣告，你在这个社会上不复存在，你悄然离去。</h6><h6 id="第三次，是这个世界上最后一个记得你的人，把你忘记，于是，你就真正地死去。整个宇宙都将不再和你有关。"><a href="#第三次，是这个世界上最后一个记得你的人，把你忘记，于是，你就真正地死去。整个宇宙都将不再和你有关。" class="headerlink" title="第三次，是这个世界上最后一个记得你的人，把你忘记，于是，你就真正地死去。整个宇宙都将不再和你有关。"></a>第三次，是这个世界上最后一个记得你的人，把你忘记，于是，你就真正地死去。整个宇宙都将不再和你有关。</h6>]]></content>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开学了</title>
+    <url>/2021/03/06/%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
+    <content><![CDATA[<h1 id="开学了"><a href="#开学了" class="headerlink" title="开学了"></a>开学了</h1><p>2021年3月，已经是大一下学期了，这一学期的事情有点多，但是经过了大一上学期的磨练，我已经有些许适应了大学的生活，新学期加油吧</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>岁月神偷</title>
+    <url>/2021/02/06/%E5%B2%81%E6%9C%88%E7%A5%9E%E5%81%B7/</url>
+    <content><![CDATA[<h2 id="措不及防的是时间"><a href="#措不及防的是时间" class="headerlink" title="措不及防的是时间"></a>措不及防的是时间</h2><p>好久好久又没有写博客了，<br>转眼间时间又过去了大半年，<br>想了想之前租的一年的学生机也快到期了，<br>与其这样浪费钱倒不如在github pages上写点东西(哈哈哈哈毕竟是免费的）</p>
+<p>哎，时间是真的很快，有时候其实想写写博客的，<br>但是打开网站却又不知道该写点什么，看着对话框发呆，<br>这新的一年马上又要开始了。</p>
+<p>希望可以在新的一年里可以好好写博客吧，<br>哈哈哈哈哈，从2016年到现在都快5年了，<br>换了好几家服务器供应商，还是没坚持下来<br>加油吧，我们</p>
+]]></content>
       <tags>
         <tag>日记</tag>
       </tags>

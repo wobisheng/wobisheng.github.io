@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-10T03:00:14.000Z</updated>
+  <updated>2021-04-25T11:10:10.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python日记</title>
+    <link href="http://example.com/2021/04/25/Python%E6%97%A5%E8%AE%B0/"/>
+    <id>http://example.com/2021/04/25/Python%E6%97%A5%E8%AE%B0/</id>
+    <published>2021-04-25T11:07:49.000Z</published>
+    <updated>2021-04-25T11:10:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p><p>写了一个可以对服务器发送post请求的小程序</p><pre><code class="python">import urllibimport urllib.requestdef sendpost(url):    head = &#123;        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;        &#125;    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)    response = urllib.request.urlopen(request)    print(response.read())if __name__ == &quot;__main__&quot;:    sendpost(&quot;http://httpbin.org/post&quot;)</code></pre><p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p><p>下面是基于requests库编写的功能差不多的小程序</p><pre><code class="python">import requestsdef sendpost(url):    head=&#123;    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,    &quot;Content-Type&quot;: &quot;application/json&quot;    &#125;    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;    try:        request = requests.post(url=url,headers=head,data=data)        print(request.content)    except Exception:        print(&quot;error&quot;,end=&quot;\n&quot;)if __name__ == &quot;__main__&quot;:    sendpost(&quot;http://httpbin.org/post&quot;)</code></pre><p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Python日记&quot;&gt;&lt;a href=&quot;#Python日记&quot; class=&quot;headerlink&quot; title=&quot;Python日记&quot;&gt;&lt;/a&gt;Python日记&lt;/h1&gt;&lt;p&gt;最近抽空学了一些爬虫有关的知识&lt;/p&gt;
+&lt;p&gt;写了一个可以对服务器发送post请求的小程序&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="程序,python" scheme="http://example.com/tags/%E7%A8%8B%E5%BA%8F-python/"/>
+    
+  </entry>
   
   <entry>
     <title>55-210长焦镜头体验</title>
