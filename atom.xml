@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-04-29T11:20:30.000Z</updated>
+  <updated>2021-05-12T11:31:18.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小记</title>
+    <link href="http://example.com/2021/05/11/%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://example.com/2021/05/11/%E5%B0%8F%E8%AE%B0/</id>
+    <published>2021-05-11T12:32:08.000Z</published>
+    <updated>2021-05-12T11:31:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    又是日常偶尔一更的博客</p><p>​    如果让我再做选择，还是更想回到小时候的生活</p><p>​    五月份的事情有点多，但也正是这些事情，让我看见了许多隐藏在深处的问题。</p><p>​    前几天又听见了洛仃洋的star moon sea，回想起了初中的那个傍晚，刚刚放学，我坐在阳台上，看着月亮，天空是深蓝色的，远处的天边微微发白，周围很静，只有昆虫的叫声，心里想着我对你的喜欢，时间好快，再看当时我的评论，已经是2016年。</p><p>​    哎，好好珍惜当下吧，说不定未来的时光还不如现在。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​    又是日常偶尔一更的博客&lt;/p&gt;
+&lt;p&gt;​    如果让我再做选择，还是更想回到小时候的生活&lt;/p&gt;
+&lt;p&gt;​    五月份的事情有点多，但也正是这些事情，让我看见了许多隐藏在深处的问题。&lt;/p&gt;
+&lt;p&gt;​    前几天又听见了洛仃洋的star moon sea，回</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="http://example.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Python日记</title>
