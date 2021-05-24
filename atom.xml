@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-12T11:31:18.000Z</updated>
+  <updated>2021-05-24T14:43:02.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python日记(二)</title>
+    <link href="http://example.com/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/"/>
+    <id>http://example.com/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/</id>
+    <published>2021-05-24T14:42:33.000Z</published>
+    <updated>2021-05-24T14:43:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllibimport urllib.requestimport redef send(url):    head=&#123;    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&quot;    &#125;    request = urllib.request.Request(url,headers = head)    response = urllib.request.urlopen(request).read()    match(response)def match(content):    con = re.findall(&#39;&lt;div class=&quot;title&quot;&gt;[^&gt;]*&gt;[^&gt;]*&gt;\n([^&lt;]*)&lt;&#39;,content.decode(&quot;utf-8&quot;))    for i in con:        try:            match = re.match(&#39;[\s]&#123;2,&#125;(.*)[\s]&#123;2,&#125;&#39;,i)            print(match.string,end=&quot;&quot;)        except Exception as result:            print(&quot;&quot;)if __name__ == &quot;__main__&quot;:    for page in range(0,250,25):        send(&quot;https://www.douban.com/doulist/240962/?start=%d&amp;sort=seq&amp;playable=0&amp;sub_type=&quot;%page)</code></pre><p>​        最近学习了用python爬虫去爬取豆瓣“电影排行前100”的界面，初步学习了正则表达式(还是有许多不足不懂的地方，仅此记录一下)</p><p>​        本来想用BeautifulSoup来爬取的，但是想到以后还得学习正则表达式，不如早点学早了事，下面是几个我遇到的问题.</p><ol><li><p>在使用re.findall()函数的时候若str直接用爬取的网页则会出现cannot use a string pattern on a bytes-like object错误，这个时候需要在后面加上decode(“utf-8”)来进行编码</p></li><li><p>re.match()返回的是match对象，这个时候若想输出string则需要用match.string的方法</p><p>(有什么想写的再写)</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;python日记-二&quot;&gt;&lt;a href=&quot;#python日记-二&quot; class=&quot;headerlink&quot; title=&quot;python日记(二)&quot;&gt;&lt;/a&gt;python日记(二)&lt;/h1&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;import urllib</summary>
+      
+    
+    
+    
+    
+    <category term="python" scheme="http://example.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>小记</title>

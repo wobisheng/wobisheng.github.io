@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  归档 |    发明家小站</title>
+  <title>  Python日记(二) |    发明家小站</title>
   <meta name="description" content="发明家的小站 powered by hexo">
   <!-- 标签页图标 -->
   
@@ -145,40 +145,108 @@
 <div class="body-outer">
   <div class="body-inner">
     
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">Python日记(二)</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">May 24 2021</div>
+      
+        <div class="post-cover"><span class="lazyload-img-span"><img data-src="https://pic.imgdb.cn/item/60abbaff2a0bae8e0c90d167.jpg" class="post-cover-img"></span></div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
 
-    <section class="archive-outer">
-    <section class="archive-inner">
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
         
+        <h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllib
+import urllib.request
+import re
+
+def send(url):
+    head=&#123;
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&quot;
+    &#125;
+    request = urllib.request.Request(url,headers = head)
+    response = urllib.request.urlopen(request).read()
+    match(response)
+
+def match(content):
+    con = re.findall(&#39;&lt;div class=&quot;title&quot;&gt;[^&gt;]*&gt;[^&gt;]*&gt;\n([^&lt;]*)&lt;&#39;,content.decode(&quot;utf-8&quot;))
+    for i in con:
+        try:
+            match = re.match(&#39;[\s]&#123;2,&#125;(.*)[\s]&#123;2,&#125;&#39;,i)
+            print(match.string,end=&quot;&quot;)
+        except Exception as result:
+            print(&quot;&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    for page in range(0,250,25):
+        send(&quot;https://www.douban.com/doulist/240962/?start=%d&amp;sort=seq&amp;playable=0&amp;sub_type=&quot;%page)
+</code></pre>
+<p>​        最近学习了用python爬虫去爬取豆瓣“电影排行前100”的界面，初步学习了正则表达式(还是有许多不足不懂的地方，仅此记录一下)</p>
+<p>​        本来想用BeautifulSoup来爬取的，但是想到以后还得学习正则表达式，不如早点学早了事，下面是几个我遇到的问题.</p>
+<ol>
+<li><p>在使用re.findall()函数的时候若str直接用爬取的网页则会出现cannot use a string pattern on a bytes-like object错误，这个时候需要在后面加上decode(“utf-8”)来进行编码</p>
+</li>
+<li><p>re.match()返回的是match对象，这个时候若想输出string则需要用match.string的方法</p>
+<p>(有什么想写的再写)</p>
+</li>
+</ol>
+
+        <!-- 分类文章 -->
         
+      </div>
+      <div class="post-content-inner-space">
         
-        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
             
-            
-        <div class="archive-name animate__animated  animate__fadeInUp">2021</div>
+           </div>
         
-          <a  href="/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">Python日记(二)</div>
-            <div class="archive-post-date">05-24</div>
-            <!-- May 24 -->
-          </div>
-          </a>
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- valine -->
         
-        
-        
-          <a  href="/2021/05/11/%E5%B0%8F%E8%AE%B0/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">小记</div>
-            <div class="archive-post-date">05-11</div>
-            <!-- May 11 -->
-          </div>
-          </a>
-        
-        
-    </section>
-</section>
+          <section id="comments" class="comments" style="margin-top: 150px;">
+            <style>
+              .comments{background:#fff}
+              @media screen and (max-width:900px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'true' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "MLTh10urf0WtnKAbKpFAlDom-gzGzoHsz",
+        app_key: "xrpFKjDUro35mNv0wfTkriRo",
+        placeholder: "说点什么吧~",
+        avatar:"robohash",
+    });
+</script>
 
-
+          </section>
+        
+        <!-- Gitalk -->
+        
+        <!-- livere -->
+        
+        </div>
+      </div>
+    
+  </div>
+</article>
   </div>
 </div>
 

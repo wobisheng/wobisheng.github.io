@@ -95,6 +95,116 @@
       </tags>
   </entry>
   <entry>
+    <title>55-210长焦镜头体验</title>
+    <url>/2021/04/10/55-210%E9%95%BF%E7%84%A6%E9%95%9C%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="55-210平民狗头体验"><a href="#55-210平民狗头体验" class="headerlink" title="55-210平民狗头体验"></a>55-210平民狗头体验</h1><blockquote>
+<p>这些日子特别想要一个长焦，但是E口的镜头一般不便宜，nex转接环加性价比较高的美能达是一个不错的选择，但是美能达毕竟是老镜头，18-105或者18-135即使在二手平台上也不便宜，18-200确实便宜，但是已经有18-55了，仔细对比还是55-210最香，价格也只是18-200的一半，虽然大家都说画质肉，但是其作为原生E口长焦，和600的价格实在是很香了。</p>
+</blockquote>
+<h2 id="0-开箱"><a href="#0-开箱" class="headerlink" title="0.开箱"></a>0.开箱</h2><p>先看看外观</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd78322e6675c5c77e1.jpg" >
+        </sapn>
+      </p>
+<p>整个镜头的大小不算小，加上遮光罩有20厘米左右，银色的镜头没有黑色的好看，但是价格却比黑色的便宜不少，实用主义者还是选择银色好点</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fa.jpg" >
+        </sapn>
+      </p>
+<p>镜头不是恒定光圈，最大光圈f4.5，支持光学防抖，焦段55-210，等效83-315，废话就不多说了，参数网上都有，下面来看看样片</p>
+<h2 id="1-样片"><a href="#1-样片" class="headerlink" title="1.样片"></a>1.样片</h2><p>首先来看看中老年人摄影</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fd.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/200    ISO:200    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>总的来讲210焦段能在这个水平，还是很不错的，不放大看细节，总体很完美，但是仔细看会发现月球的细节基本看不见，边缘色散有些严重，对得起600的价格</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7603.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/5.6    曝光时间:1/800    ISO:200    焦段:142 图片经过后期处理</p>
+</blockquote>
+<p>这张照片我自认为拍的挺好的，55-210这个头在中焦段的表现还是不错的，焦外奶化也还可以，焦内虽说不能和G头比但是还算锐利</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c760b.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>这张焦外就挺完美的虽说是f/6.3的光圈，但是在210焦段景深就非常完美了，但是仔细看边缘，色散还是较为严重</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7615.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>老年人打鸟，效果还不错</p>
+<h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的性价比还是挺不错的，是一个对于索尼E口相机练手的长焦镜头，即使以后要换镜头，出掉倒也不心疼.</p>
+]]></content>
+      <tags>
+        <tag>体验,评测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python日记(二)</title>
+    <url>/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/</url>
+    <content><![CDATA[<h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllib
+import urllib.request
+import re
+
+def send(url):
+    head=&#123;
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&quot;
+    &#125;
+    request = urllib.request.Request(url,headers = head)
+    response = urllib.request.urlopen(request).read()
+    match(response)
+
+def match(content):
+    con = re.findall(&#39;&lt;div class=&quot;title&quot;&gt;[^&gt;]*&gt;[^&gt;]*&gt;\n([^&lt;]*)&lt;&#39;,content.decode(&quot;utf-8&quot;))
+    for i in con:
+        try:
+            match = re.match(&#39;[\s]&#123;2,&#125;(.*)[\s]&#123;2,&#125;&#39;,i)
+            print(match.string,end=&quot;&quot;)
+        except Exception as result:
+            print(&quot;&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    for page in range(0,250,25):
+        send(&quot;https://www.douban.com/doulist/240962/?start=%d&amp;sort=seq&amp;playable=0&amp;sub_type=&quot;%page)
+</code></pre>
+<p>​        最近学习了用python爬虫去爬取豆瓣“电影排行前100”的界面，初步学习了正则表达式(还是有许多不足不懂的地方，仅此记录一下)</p>
+<p>​        本来想用BeautifulSoup来爬取的，但是想到以后还得学习正则表达式，不如早点学早了事，下面是几个我遇到的问题.</p>
+<ol>
+<li><p>在使用re.findall()函数的时候若str直接用爬取的网页则会出现cannot use a string pattern on a bytes-like object错误，这个时候需要在后面加上decode(“utf-8”)来进行编码</p>
+</li>
+<li><p>re.match()返回的是match对象，这个时候若想输出string则需要用match.string的方法</p>
+<p>(有什么想写的再写)</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python日记</title>
     <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
@@ -244,71 +354,12 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>55-210长焦镜头体验</title>
-    <url>/2021/04/10/55-210%E9%95%BF%E7%84%A6%E9%95%9C%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="55-210平民狗头体验"><a href="#55-210平民狗头体验" class="headerlink" title="55-210平民狗头体验"></a>55-210平民狗头体验</h1><blockquote>
-<p>这些日子特别想要一个长焦，但是E口的镜头一般不便宜，nex转接环加性价比较高的美能达是一个不错的选择，但是美能达毕竟是老镜头，18-105或者18-135即使在二手平台上也不便宜，18-200确实便宜，但是已经有18-55了，仔细对比还是55-210最香，价格也只是18-200的一半，虽然大家都说画质肉，但是其作为原生E口长焦，和600的价格实在是很香了。</p>
-</blockquote>
-<h2 id="0-开箱"><a href="#0-开箱" class="headerlink" title="0.开箱"></a>0.开箱</h2><p>先看看外观</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd78322e6675c5c77e1.jpg" >
-        </sapn>
-      </p>
-<p>整个镜头的大小不算小，加上遮光罩有20厘米左右，银色的镜头没有黑色的好看，但是价格却比黑色的便宜不少，实用主义者还是选择银色好点</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fa.jpg" >
-        </sapn>
-      </p>
-<p>镜头不是恒定光圈，最大光圈f4.5，支持光学防抖，焦段55-210，等效83-315，废话就不多说了，参数网上都有，下面来看看样片</p>
-<h2 id="1-样片"><a href="#1-样片" class="headerlink" title="1.样片"></a>1.样片</h2><p>首先来看看中老年人摄影</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fd.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/200    ISO:200    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>总的来讲210焦段能在这个水平，还是很不错的，不放大看细节，总体很完美，但是仔细看会发现月球的细节基本看不见，边缘色散有些严重，对得起600的价格</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7603.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/5.6    曝光时间:1/800    ISO:200    焦段:142 图片经过后期处理</p>
-</blockquote>
-<p>这张照片我自认为拍的挺好的，55-210这个头在中焦段的表现还是不错的，焦外奶化也还可以，焦内虽说不能和G头比但是还算锐利</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c760b.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>这张焦外就挺完美的虽说是f/6.3的光圈，但是在210焦段景深就非常完美了，但是仔细看边缘，色散还是较为严重</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7615.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>老年人打鸟，效果还不错</p>
-<h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的性价比还是挺不错的，是一个对于索尼E口相机练手的长焦镜头，即使以后要换镜头，出掉倒也不心疼.</p>
+    <title>天边轻云</title>
+    <url>/2020/06/06/%E5%A4%A9%E8%BE%B9%E8%BD%BB%E4%BA%91/</url>
+    <content><![CDATA[<p>好久好久没写博客，现在的我已经上大学了。<br>犹记得，那年，我初三，刚开始写博客，热情似火，想把生活的一切都搬到博客上来<br>时至今日，我早已没有了当时的热情，也没有了空闲的时间<br>我是一名医学生<br>学业和生活逐渐吞噬了我自己的时光，我变得被动而又没有希望，没有希望在网上可以拥有自己的一片小天地<br>经过了那么长的时间，再次打开vs，熟悉的C艹发现，自己连头文件都忘了怎么写<br>匆匆的，打开淘宝，买了一本算法书搁置了一个星期也没有来得及看<br>基础化学，医用高等数学，医用物理学，大学英语，社团活动，组织班级班会，无时无刻不在吞噬着我的时光<br>转眼，期末了<br>希望在来年可以看见我自己的进步</p>
 ]]></content>
       <tags>
-        <tag>体验,评测</tag>
+        <tag>日记</tag>
       </tags>
   </entry>
   <entry>
@@ -328,15 +379,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>天边轻云</title>
-    <url>/2020/06/06/%E5%A4%A9%E8%BE%B9%E8%BD%BB%E4%BA%91/</url>
-    <content><![CDATA[<p>好久好久没写博客，现在的我已经上大学了。<br>犹记得，那年，我初三，刚开始写博客，热情似火，想把生活的一切都搬到博客上来<br>时至今日，我早已没有了当时的热情，也没有了空闲的时间<br>我是一名医学生<br>学业和生活逐渐吞噬了我自己的时光，我变得被动而又没有希望，没有希望在网上可以拥有自己的一片小天地<br>经过了那么长的时间，再次打开vs，熟悉的C艹发现，自己连头文件都忘了怎么写<br>匆匆的，打开淘宝，买了一本算法书搁置了一个星期也没有来得及看<br>基础化学，医用高等数学，医用物理学，大学英语，社团活动，组织班级班会，无时无刻不在吞噬着我的时光<br>转眼，期末了<br>希望在来年可以看见我自己的进步</p>
-]]></content>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>小记</title>
     <url>/2021/05/11/%E5%B0%8F%E8%AE%B0/</url>
     <content><![CDATA[<p>​    又是日常偶尔一更的博客</p>
@@ -350,12 +392,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>开学了</title>
-    <url>/2021/03/06/%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
-    <content><![CDATA[<h1 id="开学了"><a href="#开学了" class="headerlink" title="开学了"></a>开学了</h1><p>2021年3月，已经是大一下学期了，这一学期的事情有点多，但是经过了大一上学期的磨练，我已经有些许适应了大学的生活，新学期加油吧</p>
-]]></content>
-  </entry>
-  <entry>
     <title>岁月神偷</title>
     <url>/2021/02/06/%E5%B2%81%E6%9C%88%E7%A5%9E%E5%81%B7/</url>
     <content><![CDATA[<h2 id="措不及防的是时间"><a href="#措不及防的是时间" class="headerlink" title="措不及防的是时间"></a>措不及防的是时间</h2><p>好久好久又没有写博客了，<br>转眼间时间又过去了大半年，<br>想了想之前租的一年的学生机也快到期了，<br>与其这样浪费钱倒不如在github pages上写点东西(哈哈哈哈毕竟是免费的）</p>
@@ -365,6 +401,12 @@ int main()
       <tags>
         <tag>日记</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>开学了</title>
+    <url>/2021/03/06/%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
+    <content><![CDATA[<h1 id="开学了"><a href="#开学了" class="headerlink" title="开学了"></a>开学了</h1><p>2021年3月，已经是大一下学期了，这一学期的事情有点多，但是经过了大一上学期的磨练，我已经有些许适应了大学的生活，新学期加油吧</p>
+]]></content>
   </entry>
   <entry>
     <title>给自己的博客加点料</title>
