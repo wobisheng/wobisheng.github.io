@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-25T13:09:08.000Z</updated>
+  <updated>2021-06-03T12:59:26.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Pages实时新闻推荐</title>
+    <link href="http://example.com/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/"/>
+    <id>http://example.com/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</id>
+    <published>2021-06-03T12:55:58.000Z</published>
+    <updated>2021-06-03T12:59:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p><p>并且打算在未来添加一个可以回顾过去每一天新闻的功能。</p><p>先来看看成果吧，点一下导航栏上面的<a href="https://wobisheng.github.io/news.html">实时新闻</a>即可体验了。</p><p>说一下大致过程的吧</p><p>服务器每天定时任务爬取百度头条，数据生成接口，网页解析接口json生成新闻</p><h4 id="下面说说我遇到的一些问题"><a href="#下面说说我遇到的一些问题" class="headerlink" title="下面说说我遇到的一些问题"></a>下面说说我遇到的一些问题</h4><p>一是静态界面如何获取接口信息的问题，因为我过去获取接口信息一直用的php，所以之前我一直在思考如何在github pages上面用静态界面获取接口信息，这个时候，我遇到了jQuery</p><p>二是最开始，我想用docker来运行这个项目，一个docker运行nginx另一个跑python，但是两个容器之间进行连接并不是一个容易的事情，遂放弃docker直接投奔nginx</p><p>三是js跨域的问题，开始我尝试了各种方法，服务器一直不给我传数据，打开开发者工具，检查后发现是因为nginx的配置文件中并没有添加 Access-Control-Allow-Origin的许可，终于，接口的数据可以在网页中被读取了</p><p>四是mixed-content的问题，是因为github pages是https而我的接口是http导致的，遂向<a href="https://elstec.cn/">节操</a>借了一个子域，勉勉强强凑了一个ssl，大功告成</p><p>期待下一个项目</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Github-Pages实时新闻推荐&quot;&gt;&lt;a href=&quot;#Github-Pages实时新闻推荐&quot; class=&quot;headerlink&quot; title=&quot;Github Pages实时新闻推荐&quot;&gt;&lt;/a&gt;Github Pages实时新闻推荐&lt;/h1&gt;&lt;p&gt;这些天学了爬</summary>
+      
+    
+    
+    
+    
+    <category term="开发,技术" scheme="http://example.com/tags/%E5%BC%80%E5%8F%91-%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Python日记(二)</title>
