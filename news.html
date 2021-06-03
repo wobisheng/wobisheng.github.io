@@ -139,7 +139,7 @@
 <div class="body-outer">
 
 
-<div id = "news" class = "animate__animated"></div>
+<div id = "news" class = "animate__animated  animate__fadeInUp"></div>
 
 <hr style = "align=center; width=300; color=#987cb9; SIZE=1;">
 </div>
@@ -205,20 +205,8 @@
         avatar:"robohash",
     });
 </script>
-
-<script type="text/javascript">
-$.getJSON("https://fmj.elstec.cn",function(data){
-	var html = " ";
-	for(var i = 1; i <= 20; i++)
-	{
-		html += '<p>' + i + ':' + data[i] + '<p>';
-		html += '<p></p>';
-	}
-   $('#news').html(html);  
-  });
-</script>
-
           </section>
 <script src="/js/white.js"></script>
+<script src="/js/news.js"></script>
 </body>
 </html>
