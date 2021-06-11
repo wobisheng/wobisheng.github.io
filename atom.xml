@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-04T16:34:24.000Z</updated>
+  <updated>2021-06-11T15:33:52.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BFS</title>
+    <link href="http://example.com/2021/06/11/BFS/"/>
+    <id>http://example.com/2021/06/11/BFS/</id>
+    <published>2021-06-11T15:19:58.000Z</published>
+    <updated>2021-06-11T15:33:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="回顾广度优先搜索"><a href="#回顾广度优先搜索" class="headerlink" title="回顾广度优先搜索"></a>回顾广度优先搜索</h1><p>好久没好好学学算法了，今天想写一个八皇后，发现啥也不会了，遂打算重新复习一下，就写了一下今天的广度优先搜索，实现的功能很简单，从N*N的表中找出最大的数(当然不是for的那种)</p><p>算法很拉，就拿这篇文章记录以下，我也没搞什么优化</p><p>下面是代码</p><pre><code class="c++">#include &lt;iostream&gt;#include &lt;queue&gt;using namespace std;#define MAX 6int a[MAX][MAX] = &#123;    &#123;3,2,5,6,4,90&#125;,    &#123;8,9,2,4,1,2&#125;,    &#123;5,60,4,7,0,5&#125;,    &#123;14,5,3,7,4,6&#125;,    &#123;1,2,3,4,5,7&#125;,    &#123;1,2,3,4,9,7&#125;,&#125;;int b[MAX+1][MAX+1];int temp;int sum;struct location &#123;    int x;    int y;&#125;;queue&lt;location&gt; que;void judge()&#123;    while(!que.empty())    &#123;        int x = que.front().x, y = que.front().y;        location temp;        if (sum &lt;= a[x][y]) sum = a[x][y];        if (x == MAX-1 &amp;&amp; y == MAX-1) break;        if ((x + 1 != MAX) &amp;&amp; (b[x + 1][y] != 1))        &#123;            temp.x = x + 1;            temp.y = y;            b[x + 1][y] = 1;            que.push(temp);        &#125;        if ((y + 1 != MAX) &amp;&amp; (b[x][y+1] != 1))        &#123;            temp.x = x;            temp.y = y + 1;            b[x][y+1] = 1;            que.push(temp);        &#125;        que.pop();    &#125;;    return;&#125;int main()&#123;    location first = &#123; 0,0 &#125;;    sum = a[0][0];    que.push(first);    judge();    printf(&quot;%d&quot;, sum);    return 0;&#125;</code></pre><p>就这样啦，运行后是90</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;回顾广度优先搜索&quot;&gt;&lt;a href=&quot;#回顾广度优先搜索&quot; class=&quot;headerlink&quot; title=&quot;回顾广度优先搜索&quot;&gt;&lt;/a&gt;回顾广度优先搜索&lt;/h1&gt;&lt;p&gt;好久没好好学学算法了，今天想写一个八皇后，发现啥也不会了，遂打算重新复习一下，就写了一下今天</summary>
+      
+    
+    
+    
+    
+    <category term="算法,BFS" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95-BFS/"/>
+    
+  </entry>
   
   <entry>
     <title>七工匠50mm f1.8镜头体验</title>
