@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-12T04:57:26.000Z</updated>
+  <updated>2021-06-12T08:19:42.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BFS走迷宫</title>
+    <link href="http://example.com/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/"/>
+    <id>http://example.com/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/</id>
+    <published>2021-06-12T08:18:31.000Z</published>
+    <updated>2021-06-12T08:19:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="BFS走迷宫"><a href="#BFS走迷宫" class="headerlink" title="BFS走迷宫"></a>BFS走迷宫</h1><p>今天上午考完CET4，终于可以暂时放下英语好好的研究算法了</p><p>本来想复习复习dfs结果看见了别人写的走迷宫，心生羡慕，那我自己也写一个吧</p><p>程序如下</p><pre><code class="c++">#include &lt;iostream&gt;#include &lt;queue&gt;using namespace std;#define MAX 10//MAX为地图大小int a[MAX][MAX] = &#123;    &#123;1,1,1,1,1,1,1,1,1,1&#125;,    &#123;0,1,1,0,0,0,1,0,1,1&#125;,    &#123;0,1,1,1,0,0,1,1,1,1&#125;,    &#123;0,1,0,0,0,0,1,0,0,0&#125;,    &#123;0,1,1,1,1,1,0,0,0,0&#125;,    &#123;0,1,1,0,1,1,1,0,0,0&#125;,    &#123;0,1,0,0,1,1,1,0,0,0&#125;,    &#123;0,1,1,0,0,0,1,0,0,0&#125;,    &#123;0,1,0,0,0,1,1,0,0,0&#125;,    &#123;0,1,1,0,0,1,1,1,1,1&#125;,&#125;;//地图，1为可走，0不可走int b[MAX][MAX] = &#123; 0 &#125;;//记录数组int temp;int sum;struct location &#123;    int x;    int y;    int store[100][100];&#125;;queue&lt;location&gt; que;void judge()&#123;    while(!que.empty())    &#123;        int x = que.front().x, y = que.front().y;        que.front().store[x][y] = 1;        b[x][y] = 1;        if (x == MAX - 1 &amp;&amp; y == MAX - 1)        &#123;            for (int i = 0; i &lt;= MAX - 1; i++)            &#123;                for (int j = 0; j &lt;= MAX - 1; j++)                    printf(&quot;%d  &quot;, que.front().store[i][j]);                printf(&quot;\n&quot;);            &#125;            printf(&quot;\n&quot;);        &#125;        if ((y + 1 &lt; MAX) &amp;&amp; (a[x][y+1]) &amp;&amp; (!b[x][y + 1]))        &#123;            que.front().y = y + 1;            que.front().x = x;            que.push(que.front());        &#125;        if ((x + 1 &lt; MAX) &amp;&amp; (a[x + 1][y]) &amp;&amp; (!b[x + 1][y]))        &#123;            que.front().x = x + 1;            que.front().y = y;            que.push(que.front());        &#125;        if ((y &gt; 0) &amp;&amp; a[x][y-1] != 0 &amp;&amp; b[x][y - 1] != 1)        &#123;            que.front().y = y - 1;            que.front().x = x;            que.push(que.front());        &#125;        if ((x &gt; 0) &amp;&amp; a[x-1][y] != 0 &amp;&amp; b[x - 1][y] != 1)        &#123;            que.front().x = x - 1;            que.front().y = y;            que.push(que.front());        &#125;        que.pop();    &#125;;    return;&#125;int main()&#123;    location *first = (location*)malloc(sizeof(location));    first-&gt;x = 0;    first-&gt;y = 0;    for (int i = 0; i &lt;= MAX; i++)        for (int j = 0; j &lt;= MAX; j++)            first-&gt;store[i][j] = 0;    //不懂为什么申请了内存空间后，struct里面数组初始化无效所以只能在这里用for初始化了    first-&gt;store[0][0] = 1;    que.push(*first);    judge();    return 0;&#125;</code></pre><p>输入为n*n的地图</p><p>输出为解法，如下图</p><p>        <span class="lazyload-img-span">        <img              data-src="https://pic.imgdb.cn/item/60c465a8844ef46bb26966f3.jpg" >        </sapn>      </p><p>这只是不到3个小时写的粗品，可能有很多不足的地方，但是看见它能跑起来，心中已经很开心了</p><p>记得以前在OJ上面做过的一道题，给一个n*n大小的格子，每个格子有一个值，从左上走到右下，哪条路线加起来的和最大，当时那个程序我是用递归+回溯写的，因为以前对于BFS的掌握不好，所以也不经常用</p><p>现在终于用BFS实现了类似的功能</p><p>也是遇到了一些问题，比如</p><p>为什么申请了内存空间后，struct里面数组初始化无效之类的</p><p>但是我感觉了解了这个算法的大致架构，思路，其实还是最重要的</p><p>就这样啦，继续努力</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;BFS走迷宫&quot;&gt;&lt;a href=&quot;#BFS走迷宫&quot; class=&quot;headerlink&quot; title=&quot;BFS走迷宫&quot;&gt;&lt;/a&gt;BFS走迷宫&lt;/h1&gt;&lt;p&gt;今天上午考完CET4，终于可以暂时放下英语好好的研究算法了&lt;/p&gt;
+&lt;p&gt;本来想复习复习dfs结果看见了别人</summary>
+      
+    
+    
+    
+    
+    <category term="算法,BFS" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95-BFS/"/>
+    
+  </entry>
   
   <entry>
     <title>BFS</title>
