@@ -231,6 +231,59 @@ int main()
 &#125;
 </code></pre>
 <p>就这样啦，运行后是90</p>
+<h3 id="继昨天的算法，稍稍改进以下，就得到了一个算n-n格子有多少种走法的算法"><a href="#继昨天的算法，稍稍改进以下，就得到了一个算n-n格子有多少种走法的算法" class="headerlink" title="继昨天的算法，稍稍改进以下，就得到了一个算n*n格子有多少种走法的算法"></a>继昨天的算法，稍稍改进以下，就得到了一个算n*n格子有多少种走法的算法</h3><pre><code class="c++">#include &lt;iostream&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+#define MAX 4
+
+int a[MAX][MAX] = &#123;0&#125;;
+int b[MAX+1][MAX+1];
+int temp;
+int n;
+int sum;
+
+struct location &#123;
+    int x;
+    int y;
+&#125;;
+
+queue&lt;location&gt; que;
+
+void judge()
+&#123;
+    while(!que.empty())
+    &#123;
+        int x = que.front().x, y = que.front().y;
+        location temp;
+        if (x == MAX - 1 &amp;&amp; y == MAX - 1) &#123; n++; &#125;
+        if ((x + 1 != MAX))
+        &#123;
+            temp.x = x + 1;
+            temp.y = y;
+            que.push(temp);
+        &#125;
+        if ((y + 1 != MAX))
+        &#123;
+            temp.x = x;
+            temp.y = y + 1;
+            que.push(temp);
+        &#125;
+        que.pop();
+    &#125;;
+    return;
+&#125;
+
+int main()
+&#123;
+    location first = &#123; 0,0 &#125;;
+    sum = a[0][0];
+    que.push(first);
+    judge();
+    printf(&quot;%d&quot;, n);
+    return 0;
+&#125;
+</code></pre>
 ]]></content>
       <tags>
         <tag>算法,BFS</tag>
