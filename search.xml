@@ -290,24 +290,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Github Pages实时新闻推荐</title>
-    <url>/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p>
-<p>并且打算在未来添加一个可以回顾过去每一天新闻的功能。</p>
-<p>先来看看成果吧，点一下导航栏上面的<a href="https://wobisheng.github.io/news.html">实时新闻</a>即可体验了。</p>
-<p>说一下大致过程的吧</p>
-<p>服务器每天定时任务爬取百度头条，数据生成接口，网页解析接口json生成新闻</p>
-<h4 id="下面说说我遇到的一些问题"><a href="#下面说说我遇到的一些问题" class="headerlink" title="下面说说我遇到的一些问题"></a>下面说说我遇到的一些问题</h4><p>一是静态界面如何获取接口信息的问题，因为我过去获取接口信息一直用的php，所以之前我一直在思考如何在github pages上面用静态界面获取接口信息，这个时候，我遇到了jQuery</p>
-<p>二是最开始，我想用docker来运行这个项目，一个docker运行nginx另一个跑python，但是两个容器之间进行连接并不是一个容易的事情，遂放弃docker直接投奔nginx</p>
-<p>三是js跨域的问题，开始我尝试了各种方法，服务器一直不给我传数据，打开开发者工具，检查后发现是因为nginx的配置文件中并没有添加 Access-Control-Allow-Origin的许可，终于，接口的数据可以在网页中被读取了</p>
-<p>四是mixed-content的问题，是因为github pages是https而我的接口是http导致的，遂向<a href="https://elstec.cn/">节操</a>借了一个子域，勉勉强强凑了一个ssl，大功告成</p>
-<p>期待下一个项目</p>
-]]></content>
-      <tags>
-        <tag>开发,技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BFS走迷宫</title>
     <url>/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/</url>
     <content><![CDATA[<h1 id="BFS走迷宫"><a href="#BFS走迷宫" class="headerlink" title="BFS走迷宫"></a>BFS走迷宫</h1><p>今天上午考完CET4，终于可以暂时放下英语好好的研究算法了</p>
@@ -427,48 +409,21 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Python日记</title>
-    <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
-<p>写了一个可以对服务器发送post请求的小程序</p>
-<pre><code class="python">import urllib
-import urllib.request
-
-def sendpost(url):
-    head = &#123;
-        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;
-        &#125;
-    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)
-    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)
-    response = urllib.request.urlopen(request)
-    print(response.read())
-
-if __name__ == &quot;__main__&quot;:
-    sendpost(&quot;http://httpbin.org/post&quot;)
-</code></pre>
-<p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p>
-<p>下面是基于requests库编写的功能差不多的小程序</p>
-<pre><code class="python">import requests
-
-def sendpost(url):
-    head=&#123;
-    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,
-    &quot;Content-Type&quot;: &quot;application/json&quot;
-    &#125;
-    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;
-    try:
-        request = requests.post(url=url,headers=head,data=data)
-        print(request.content)
-    except Exception:
-        print(&quot;error&quot;,end=&quot;\n&quot;)
-
-if __name__ == &quot;__main__&quot;:
-    sendpost(&quot;http://httpbin.org/post&quot;)
-</code></pre>
-<p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>
+    <title>Github Pages实时新闻推荐</title>
+    <url>/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p>
+<p>并且打算在未来添加一个可以回顾过去每一天新闻的功能。</p>
+<p>先来看看成果吧，点一下导航栏上面的<a href="https://wobisheng.github.io/news.html">实时新闻</a>即可体验了。</p>
+<p>说一下大致过程的吧</p>
+<p>服务器每天定时任务爬取百度头条，数据生成接口，网页解析接口json生成新闻</p>
+<h4 id="下面说说我遇到的一些问题"><a href="#下面说说我遇到的一些问题" class="headerlink" title="下面说说我遇到的一些问题"></a>下面说说我遇到的一些问题</h4><p>一是静态界面如何获取接口信息的问题，因为我过去获取接口信息一直用的php，所以之前我一直在思考如何在github pages上面用静态界面获取接口信息，这个时候，我遇到了jQuery</p>
+<p>二是最开始，我想用docker来运行这个项目，一个docker运行nginx另一个跑python，但是两个容器之间进行连接并不是一个容易的事情，遂放弃docker直接投奔nginx</p>
+<p>三是js跨域的问题，开始我尝试了各种方法，服务器一直不给我传数据，打开开发者工具，检查后发现是因为nginx的配置文件中并没有添加 Access-Control-Allow-Origin的许可，终于，接口的数据可以在网页中被读取了</p>
+<p>四是mixed-content的问题，是因为github pages是https而我的接口是http导致的，遂向<a href="https://elstec.cn/">节操</a>借了一个子域，勉勉强强凑了一个ssl，大功告成</p>
+<p>期待下一个项目</p>
 ]]></content>
       <tags>
-        <tag>程序,python</tag>
+        <tag>开发,技术</tag>
       </tags>
   </entry>
   <entry>
@@ -511,6 +466,51 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python日记</title>
+    <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
+<p>写了一个可以对服务器发送post请求的小程序</p>
+<pre><code class="python">import urllib
+import urllib.request
+
+def sendpost(url):
+    head = &#123;
+        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;
+        &#125;
+    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)
+    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)
+    response = urllib.request.urlopen(request)
+    print(response.read())
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p>
+<p>下面是基于requests库编写的功能差不多的小程序</p>
+<pre><code class="python">import requests
+
+def sendpost(url):
+    head=&#123;
+    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+    &#125;
+    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;
+    try:
+        request = requests.post(url=url,headers=head,data=data)
+        print(request.content)
+    except Exception:
+        print(&quot;error&quot;,end=&quot;\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>
+]]></content>
+      <tags>
+        <tag>程序,python</tag>
       </tags>
   </entry>
   <entry>
@@ -579,15 +579,6 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>镜头,评测</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>天边轻云</title>
-    <url>/2020/06/06/%E5%A4%A9%E8%BE%B9%E8%BD%BB%E4%BA%91/</url>
-    <content><![CDATA[<p>好久好久没写博客，现在的我已经上大学了。<br>犹记得，那年，我初三，刚开始写博客，热情似火，想把生活的一切都搬到博客上来<br>时至今日，我早已没有了当时的热情，也没有了空闲的时间<br>我是一名医学生<br>学业和生活逐渐吞噬了我自己的时光，我变得被动而又没有希望，没有希望在网上可以拥有自己的一片小天地<br>经过了那么长的时间，再次打开vs，熟悉的C艹发现，自己连头文件都忘了怎么写<br>匆匆的，打开淘宝，买了一本算法书搁置了一个星期也没有来得及看<br>基础化学，医用高等数学，医用物理学，大学英语，社团活动，组织班级班会，无时无刻不在吞噬着我的时光<br>转眼，期末了<br>希望在来年可以看见我自己的进步</p>
-]]></content>
-      <tags>
-        <tag>日记</tag>
       </tags>
   </entry>
   <entry>
@@ -695,6 +686,28 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>天边轻云</title>
+    <url>/2020/06/06/%E5%A4%A9%E8%BE%B9%E8%BD%BB%E4%BA%91/</url>
+    <content><![CDATA[<p>好久好久没写博客，现在的我已经上大学了。<br>犹记得，那年，我初三，刚开始写博客，热情似火，想把生活的一切都搬到博客上来<br>时至今日，我早已没有了当时的热情，也没有了空闲的时间<br>我是一名医学生<br>学业和生活逐渐吞噬了我自己的时光，我变得被动而又没有希望，没有希望在网上可以拥有自己的一片小天地<br>经过了那么长的时间，再次打开vs，熟悉的C艹发现，自己连头文件都忘了怎么写<br>匆匆的，打开淘宝，买了一本算法书搁置了一个星期也没有来得及看<br>基础化学，医用高等数学，医用物理学，大学英语，社团活动，组织班级班会，无时无刻不在吞噬着我的时光<br>转眼，期末了<br>希望在来年可以看见我自己的进步</p>
+]]></content>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小记</title>
+    <url>/2021/05/11/%E5%B0%8F%E8%AE%B0/</url>
+    <content><![CDATA[<p>​    又是日常偶尔一更的博客</p>
+<p>​    如果让我再做选择，还是更想回到小时候的生活</p>
+<p>​    五月份的事情有点多，但也正是这些事情，让我看见了许多隐藏在深处的问题。</p>
+<p>​    前几天又听见了洛仃洋的star moon sea，回想起了初中的那个傍晚，刚刚放学，我坐在阳台上，看着月亮，天空是深蓝色的，远处的天边微微发白，周围很静，只有昆虫的叫声，心里想着我对你的喜欢，时间好快，再看当时我的评论，已经是2016年。</p>
+<p>​    哎，好好珍惜当下吧，说不定未来的时光还不如现在。</p>
+]]></content>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>山丹丹花开花又落，一年又一年</title>
     <url>/2021/02/13/%E5%B1%B1%E4%B8%B9%E4%B8%B9%E8%8A%B1%E5%BC%80%E8%8A%B1%E5%8F%88%E8%90%BD%EF%BC%8C%E4%B8%80%E5%B9%B4%E5%8F%88%E4%B8%80%E5%B9%B4/</url>
     <content><![CDATA[<blockquote>
@@ -722,22 +735,23 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>小记</title>
-    <url>/2021/05/11/%E5%B0%8F%E8%AE%B0/</url>
-    <content><![CDATA[<p>​    又是日常偶尔一更的博客</p>
-<p>​    如果让我再做选择，还是更想回到小时候的生活</p>
-<p>​    五月份的事情有点多，但也正是这些事情，让我看见了许多隐藏在深处的问题。</p>
-<p>​    前几天又听见了洛仃洋的star moon sea，回想起了初中的那个傍晚，刚刚放学，我坐在阳台上，看着月亮，天空是深蓝色的，远处的天边微微发白，周围很静，只有昆虫的叫声，心里想着我对你的喜欢，时间好快，再看当时我的评论，已经是2016年。</p>
-<p>​    哎，好好珍惜当下吧，说不定未来的时光还不如现在。</p>
-]]></content>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>开学了</title>
     <url>/2021/03/06/%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
     <content><![CDATA[<h1 id="开学了"><a href="#开学了" class="headerlink" title="开学了"></a>开学了</h1><p>2021年3月，已经是大一下学期了，这一学期的事情有点多，但是经过了大一上学期的磨练，我已经有些许适应了大学的生活，新学期加油吧</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>疫情就在身边</title>
+    <url>/2021/07/31/%E7%96%AB%E6%83%85%E5%B0%B1%E5%9C%A8%E8%BA%AB%E8%BE%B9/</url>
+    <content><![CDATA[<h2 id="起自一场旅行"><a href="#起自一场旅行" class="headerlink" title="起自一场旅行"></a>起自一场旅行</h2><h4 id="7-20日，南京爆发了新冠病毒"><a href="#7-20日，南京爆发了新冠病毒" class="headerlink" title="7.20日，南京爆发了新冠病毒"></a>7.20日，南京爆发了新冠病毒</h4><h4 id="7-26日，因为提前买过了票，故去张家界旅游"><a href="#7-26日，因为提前买过了票，故去张家界旅游" class="headerlink" title="7.26日，因为提前买过了票，故去张家界旅游"></a>7.26日，因为提前买过了票，故去张家界旅游</h4><h4 id="7-29-30日，旅行社遣返回家"><a href="#7-29-30日，旅行社遣返回家" class="headerlink" title="7.29-30日，旅行社遣返回家"></a>7.29-30日，旅行社遣返回家</h4><p>以上便是我这几天的真实经历，我也因此需在家隔离14天，做6次核酸检测</p>
+<p>此次近距离接近疫情，我也真真切切感受到了疫情的可怕</p>
+<p>27号早上，在张家界国家森林公园里面拍了一上午队，景区人头攒动，排队排了好几个小时，人口密度大的难以想象，并且好多人并没有戴口罩，当时我在想，要是有一个人是确诊病例，那整个景区感染的人数不得上千了。</p>
+<p>27号中午，在张家界国家森林公园吃午饭，午饭的地点是地下的集体食堂，人来人往，排队打饭，因为要吃饭，所以没法戴口罩，并且是室内密闭空间，我心中忐忑，但还是找了个人少的地方，摘掉口罩，随便吃了一点。</p>
+<p>27号晚上，到凤凰县转了一圈，依然是可怕的人口密度，丝毫没有疫情的感觉。然而当晚我就得知，原来21-22号有一个确诊病例来过凤凰县，着实给我吓出一身冷汗。</p>
+<p>28号上午，去了苗寨，当地的导游并没有戴口罩。</p>
+<p>28号中午，国家发布信息，新冠变异株从南京禄口机场经过游客带到魅力湘西剧场，间接传播给好几个人。按照旅行社时间表，29号晚，我也要去魅力湘西，但此时我已经不打算去了，甚至有些想提前买票回家。</p>
+<p>29号上午，去天门山旅行，路上收到短信，飞机竟然取消了，中午导游跟大家说旅行紧急结束了，并且旅行社包了大巴，将大家送到了长沙，让我们明天就从长沙坐飞机回家，路上车上的氛围紧张极了，大家都很害怕在长沙能不能住宿，因为司机说长沙的宾馆看见从张家界来的就不收了</p>
+<p>大致旅程就是这样，现在我依然没有缓解过来，疫情或许远比大家想象的要严重，所以一定要做好防护。</p>
 ]]></content>
   </entry>
   <entry>
@@ -794,19 +808,5 @@ document.getElementById(&quot;sentence&quot;).innerHTML = sentences[Math.floor(M
       <tags>
         <tag>博客技术</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>疫情就在身边</title>
-    <url>/2021/07/31/%E7%96%AB%E6%83%85%E5%B0%B1%E5%9C%A8%E8%BA%AB%E8%BE%B9/</url>
-    <content><![CDATA[<h2 id="起自一场旅行"><a href="#起自一场旅行" class="headerlink" title="起自一场旅行"></a>起自一场旅行</h2><h4 id="7-20日，南京爆发了新冠病毒"><a href="#7-20日，南京爆发了新冠病毒" class="headerlink" title="7.20日，南京爆发了新冠病毒"></a>7.20日，南京爆发了新冠病毒</h4><h4 id="7-26日，因为提前买过了票，故去张家界旅游"><a href="#7-26日，因为提前买过了票，故去张家界旅游" class="headerlink" title="7.26日，因为提前买过了票，故去张家界旅游"></a>7.26日，因为提前买过了票，故去张家界旅游</h4><h4 id="7-29-30日，旅行社遣返回家"><a href="#7-29-30日，旅行社遣返回家" class="headerlink" title="7.29-30日，旅行社遣返回家"></a>7.29-30日，旅行社遣返回家</h4><p>以上便是我这几天的真实经历，我也因此需在家隔离14天，做6次核酸检测</p>
-<p>此次近距离接近疫情，我也真真切切感受到了疫情的可怕</p>
-<p>27号早上，在张家界国家森林公园里面拍了一上午队，景区人头攒动，排队排了好几个小时，人口密度大的难以想象，并且好多人并没有戴口罩，当时我在想，要是有一个人是确诊病例，那整个景区感染的人数不得上千了。</p>
-<p>27号中午，在张家界国家森林公园吃午饭，午饭的地点是地下的集体食堂，人来人往，排队打饭，因为要吃饭，所以没法戴口罩，并且是室内密闭空间，我心中忐忑，但还是找了个人少的地方，摘掉口罩，随便吃了一点。</p>
-<p>27号晚上，到凤凰县转了一圈，依然是可怕的人口密度，丝毫没有疫情的感觉。然而当晚我就得知，原来21-22号有一个确诊病例来过凤凰县，着实给我吓出一身冷汗。</p>
-<p>28号上午，去了苗寨，当地的导游并没有戴口罩。</p>
-<p>28号中午，国家发布信息，新冠变异株从南京禄口机场经过游客带到魅力湘西剧场，间接传播给好几个人。按照旅行社时间表，29号晚，我也要去魅力湘西，但此时我已经不打算去了，甚至有些想提前买票回家。</p>
-<p>29号上午，去天门山旅行，路上收到短信，飞机竟然取消了，中午导游跟大家说旅行紧急结束了，并且旅行社包了大巴，将大家送到了长沙，让我们明天就从长沙坐飞机回家，路上车上的氛围紧张极了，大家都很害怕在长沙能不能住宿，因为司机说长沙的宾馆看见从张家界来的就不收了</p>
-<p>大致旅程就是这样，现在我依然没有缓解过来，疫情或许远比大家想象的要严重，所以一定要做好防护。</p>
-]]></content>
   </entry>
 </search>
