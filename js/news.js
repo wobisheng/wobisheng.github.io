@@ -1,4 +1,4 @@
-$.getJSON("https://fmj.elstec.cn",function(data){
+$.getJSON("https://raw.githubusercontent.com/wobisheng/test/main/baidu.json",function(data){
 	var html = " ";
 	for(var i = 1; i <= 20; i++)
 	{
