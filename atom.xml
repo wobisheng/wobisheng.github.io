@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-01T04:39:06.000Z</updated>
+  <updated>2021-09-07T04:09:48.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>做一个nodemcu wifi天气小闹钟</title>
+    <link href="http://example.com/2021/09/06/%E5%81%9A%E4%B8%80%E4%B8%AAnodemcu-wifi%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%97%B9%E9%92%9F/"/>
+    <id>http://example.com/2021/09/06/%E5%81%9A%E4%B8%80%E4%B8%AAnodemcu-wifi%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%97%B9%E9%92%9F/</id>
+    <published>2021-09-06T09:46:48.000Z</published>
+    <updated>2021-09-07T04:09:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Nodemcu-wifi天气闹钟"><a href="#Nodemcu-wifi天气闹钟" class="headerlink" title="Nodemcu wifi天气闹钟"></a>Nodemcu wifi天气闹钟</h1><p>​    假期在家，闲来无事，拿出了以前玩的开发板，在网上看到了别人的点阵屏小闹钟，甚是羡慕，便买了一个32<em>8的小点阵屏，通过四块8\</em>8的共阴点阵屏并联而成，由四个MAX7219驱动。</p><p>​    项目开始的时候，傻傻的分不清MOSI和MISO，MISO( Master Input Slave Output )，MOSI(Master Output Slave Input)应该接MISO，而不是MOSI，然后引入LedControl.h库，点阵屏就成功驱动了，下了一个取模用的软件，便可以画图标了。</p><p>​    时间模块方面，因为我只有四块点阵，所以只能用其中的两块作为时间显示，那该如何让数字偏移呢，这里需要用到cmath里面的pow()函数，即pow(2,n)偏移量为n，数字便会向左偏移n个像素点位置了，如此，时间模块便写好了。</p><p>​    天气模块只需要画一些图标，请求api便可以实现，这里我采用了高德天气的api，用了一个arduino String模块自带的搜索对象，就不用再引入解析json的库了也方便了一些。</p><p>​    大致就是如此了。</p><p>​    <a href="https://www.bilibili.com/video/BV1yf4y1N7UA/">项目视频在这里呢</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Nodemcu-wifi天气闹钟&quot;&gt;&lt;a href=&quot;#Nodemcu-wifi天气闹钟&quot; class=&quot;headerlink&quot; title=&quot;Nodemcu wifi天气闹钟&quot;&gt;&lt;/a&gt;Nodemcu wifi天气闹钟&lt;/h1&gt;&lt;p&gt;​    假期在家，闲来无事</summary>
+      
+    
+    
+    
+    
+    <category term="DIY" scheme="http://example.com/tags/DIY/"/>
+    
+  </entry>
   
   <entry>
     <title>疫情就在身边</title>

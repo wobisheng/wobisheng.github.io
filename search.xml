@@ -290,24 +290,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Github Pages实时新闻推荐</title>
-    <url>/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p>
-<p>并且打算在未来添加一个可以回顾过去每一天新闻的功能。</p>
-<p>先来看看成果吧，点一下导航栏上面的<a href="https://wobisheng.github.io/news.html">实时新闻</a>即可体验了。</p>
-<p>说一下大致过程的吧</p>
-<p>服务器每天定时任务爬取百度头条，数据生成接口，网页解析接口json生成新闻</p>
-<h4 id="下面说说我遇到的一些问题"><a href="#下面说说我遇到的一些问题" class="headerlink" title="下面说说我遇到的一些问题"></a>下面说说我遇到的一些问题</h4><p>一是静态界面如何获取接口信息的问题，因为我过去获取接口信息一直用的php，所以之前我一直在思考如何在github pages上面用静态界面获取接口信息，这个时候，我遇到了jQuery</p>
-<p>二是最开始，我想用docker来运行这个项目，一个docker运行nginx另一个跑python，但是两个容器之间进行连接并不是一个容易的事情，遂放弃docker直接投奔nginx</p>
-<p>三是js跨域的问题，开始我尝试了各种方法，服务器一直不给我传数据，打开开发者工具，检查后发现是因为nginx的配置文件中并没有添加 Access-Control-Allow-Origin的许可，终于，接口的数据可以在网页中被读取了</p>
-<p>四是mixed-content的问题，是因为github pages是https而我的接口是http导致的，遂向<a href="https://elstec.cn/">节操</a>借了一个子域，勉勉强强凑了一个ssl，大功告成</p>
-<p>期待下一个项目</p>
-]]></content>
-      <tags>
-        <tag>开发,技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BFS走迷宫</title>
     <url>/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/</url>
     <content><![CDATA[<h1 id="BFS走迷宫"><a href="#BFS走迷宫" class="headerlink" title="BFS走迷宫"></a>BFS走迷宫</h1><p>今天上午考完CET4，终于可以暂时放下英语好好的研究算法了</p>
@@ -424,6 +406,24 @@ int main()
 ]]></content>
       <tags>
         <tag>算法,BFS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github Pages实时新闻推荐</title>
+    <url>/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p>
+<p>并且打算在未来添加一个可以回顾过去每一天新闻的功能。</p>
+<p>先来看看成果吧，点一下导航栏上面的<a href="https://wobisheng.github.io/news.html">实时新闻</a>即可体验了。</p>
+<p>说一下大致过程的吧</p>
+<p>服务器每天定时任务爬取百度头条，数据生成接口，网页解析接口json生成新闻</p>
+<h4 id="下面说说我遇到的一些问题"><a href="#下面说说我遇到的一些问题" class="headerlink" title="下面说说我遇到的一些问题"></a>下面说说我遇到的一些问题</h4><p>一是静态界面如何获取接口信息的问题，因为我过去获取接口信息一直用的php，所以之前我一直在思考如何在github pages上面用静态界面获取接口信息，这个时候，我遇到了jQuery</p>
+<p>二是最开始，我想用docker来运行这个项目，一个docker运行nginx另一个跑python，但是两个容器之间进行连接并不是一个容易的事情，遂放弃docker直接投奔nginx</p>
+<p>三是js跨域的问题，开始我尝试了各种方法，服务器一直不给我传数据，打开开发者工具，检查后发现是因为nginx的配置文件中并没有添加 Access-Control-Allow-Origin的许可，终于，接口的数据可以在网页中被读取了</p>
+<p>四是mixed-content的问题，是因为github pages是https而我的接口是http导致的，遂向<a href="https://elstec.cn/">节操</a>借了一个子域，勉勉强强凑了一个ssl，大功告成</p>
+<p>期待下一个项目</p>
+]]></content>
+      <tags>
+        <tag>开发,技术</tag>
       </tags>
   </entry>
   <entry>
@@ -579,6 +579,20 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>镜头,评测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>做一个nodemcu wifi天气小闹钟</title>
+    <url>/2021/09/06/%E5%81%9A%E4%B8%80%E4%B8%AAnodemcu-wifi%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%97%B9%E9%92%9F/</url>
+    <content><![CDATA[<h1 id="Nodemcu-wifi天气闹钟"><a href="#Nodemcu-wifi天气闹钟" class="headerlink" title="Nodemcu wifi天气闹钟"></a>Nodemcu wifi天气闹钟</h1><p>​    假期在家，闲来无事，拿出了以前玩的开发板，在网上看到了别人的点阵屏小闹钟，甚是羡慕，便买了一个32<em>8的小点阵屏，通过四块8\</em>8的共阴点阵屏并联而成，由四个MAX7219驱动。</p>
+<p>​    项目开始的时候，傻傻的分不清MOSI和MISO，MISO( Master Input Slave Output )，MOSI(Master Output Slave Input)应该接MISO，而不是MOSI，然后引入LedControl.h库，点阵屏就成功驱动了，下了一个取模用的软件，便可以画图标了。</p>
+<p>​    时间模块方面，因为我只有四块点阵，所以只能用其中的两块作为时间显示，那该如何让数字偏移呢，这里需要用到cmath里面的pow()函数，即pow(2,n)偏移量为n，数字便会向左偏移n个像素点位置了，如此，时间模块便写好了。</p>
+<p>​    天气模块只需要画一些图标，请求api便可以实现，这里我采用了高德天气的api，用了一个arduino String模块自带的搜索对象，就不用再引入解析json的库了也方便了一些。</p>
+<p>​    大致就是如此了。</p>
+<p>​    <a href="https://www.bilibili.com/video/BV1yf4y1N7UA/">项目视频在这里呢</a></p>
+]]></content>
+      <tags>
+        <tag>DIY</tag>
       </tags>
   </entry>
   <entry>
