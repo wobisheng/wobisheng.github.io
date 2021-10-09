@@ -95,193 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>55-210长焦镜头体验</title>
-    <url>/2021/04/10/55-210%E9%95%BF%E7%84%A6%E9%95%9C%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
-    <content><![CDATA[<h1 id="55-210平民狗头体验"><a href="#55-210平民狗头体验" class="headerlink" title="55-210平民狗头体验"></a>55-210平民狗头体验</h1><blockquote>
-<p>这些日子特别想要一个长焦，但是E口的镜头一般不便宜，nex转接环加性价比较高的美能达是一个不错的选择，但是美能达毕竟是老镜头，18-105或者18-135即使在二手平台上也不便宜，18-200确实便宜，但是已经有18-55了，仔细对比还是55-210最香，价格也只是18-200的一半，虽然大家都说画质肉，但是其作为原生E口长焦，和600的价格实在是很香了。</p>
-</blockquote>
-<h2 id="0-开箱"><a href="#0-开箱" class="headerlink" title="0.开箱"></a>0.开箱</h2><p>先看看外观</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd78322e6675c5c77e1.jpg" >
-        </sapn>
-      </p>
-<p>整个镜头的大小不算小，加上遮光罩有20厘米左右，银色的镜头没有黑色的好看，但是价格却比黑色的便宜不少，实用主义者还是选择银色好点</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fa.jpg" >
-        </sapn>
-      </p>
-<p>镜头不是恒定光圈，最大光圈f4.5，支持光学防抖，焦段55-210，等效83-315，废话就不多说了，参数网上都有，下面来看看样片</p>
-<h2 id="1-样片"><a href="#1-样片" class="headerlink" title="1.样片"></a>1.样片</h2><p>首先来看看中老年人摄影</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fd.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/200    ISO:200    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>总的来讲210焦段能在这个水平，还是很不错的，不放大看细节，总体很完美，但是仔细看会发现月球的细节基本看不见，边缘色散有些严重，对得起600的价格</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7603.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/5.6    曝光时间:1/800    ISO:200    焦段:142 图片经过后期处理</p>
-</blockquote>
-<p>这张照片我自认为拍的挺好的，55-210这个头在中焦段的表现还是不错的，焦外奶化也还可以，焦内虽说不能和G头比但是还算锐利</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c760b.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>这张焦外就挺完美的虽说是f/6.3的光圈，但是在210焦段景深就非常完美了，但是仔细看边缘，色散还是较为严重</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7615.jpg" >
-        </sapn>
-      </p>
-<blockquote>
-<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
-</blockquote>
-<p>老年人打鸟，效果还不错</p>
-<h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的性价比还是挺不错的，是一个对于索尼E口相机练手的长焦镜头，即使以后要换镜头，出掉倒也不心疼.</p>
-]]></content>
-      <tags>
-        <tag>体验,评测</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BFS走迷宫</title>
-    <url>/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/</url>
-    <content><![CDATA[<h1 id="BFS走迷宫"><a href="#BFS走迷宫" class="headerlink" title="BFS走迷宫"></a>BFS走迷宫</h1><p>今天上午考完CET4，终于可以暂时放下英语好好的研究算法了</p>
-<p>本来想复习复习dfs结果看见了别人写的走迷宫，心生羡慕，那我自己也写一个吧</p>
-<p>程序如下</p>
-<pre><code class="c++">#include &lt;iostream&gt;
-#include &lt;queue&gt;
-
-using namespace std;
-
-#define MAX 10//MAX为地图大小
-
-int a[MAX][MAX] = &#123;
-    &#123;1,1,1,1,1,1,1,1,1,1&#125;,
-    &#123;0,1,1,0,0,0,1,0,1,1&#125;,
-    &#123;0,1,1,1,0,0,1,1,1,1&#125;,
-    &#123;0,1,0,0,0,0,1,0,0,0&#125;,
-    &#123;0,1,1,1,1,1,0,0,0,0&#125;,
-    &#123;0,1,1,0,1,1,1,0,0,0&#125;,
-    &#123;0,1,0,0,1,1,1,0,0,0&#125;,
-    &#123;0,1,1,0,0,0,1,0,0,0&#125;,
-    &#123;0,1,0,0,0,1,1,0,0,0&#125;,
-    &#123;0,1,1,0,0,1,1,1,1,1&#125;,
-&#125;;//地图，1为可走，0不可走
-int b[MAX][MAX] = &#123; 0 &#125;;//记录数组
-int temp;
-int sum;
-
-struct location 
-&#123;
-    int x;
-    int y;
-    int store[100][100];
-&#125;;
-
-queue&lt;location&gt; que;
-
-void judge()
-&#123;
-    while(!que.empty())
-    &#123;
-        int x = que.front().x, y = que.front().y;
-        que.front().store[x][y] = 1;
-        b[x][y] = 1;
-        if (x == MAX - 1 &amp;&amp; y == MAX - 1)
-        &#123;
-            for (int i = 0; i &lt;= MAX - 1; i++)
-            &#123;
-                for (int j = 0; j &lt;= MAX - 1; j++)
-                    printf(&quot;%d  &quot;, que.front().store[i][j]);
-                printf(&quot;\n&quot;);
-            &#125;
-            printf(&quot;\n&quot;);
-        &#125;
-        if ((y + 1 &lt; MAX) &amp;&amp; (a[x][y+1]) &amp;&amp; (!b[x][y + 1]))
-        &#123;
-            que.front().y = y + 1;
-            que.front().x = x;
-            que.push(que.front());
-        &#125;
-        if ((x + 1 &lt; MAX) &amp;&amp; (a[x + 1][y]) &amp;&amp; (!b[x + 1][y]))
-        &#123;
-            que.front().x = x + 1;
-            que.front().y = y;
-            que.push(que.front());
-        &#125;
-        if ((y &gt; 0) &amp;&amp; a[x][y-1] != 0 &amp;&amp; b[x][y - 1] != 1)
-        &#123;
-            que.front().y = y - 1;
-            que.front().x = x;
-            que.push(que.front());
-        &#125;
-        if ((x &gt; 0) &amp;&amp; a[x-1][y] != 0 &amp;&amp; b[x - 1][y] != 1)
-        &#123;
-            que.front().x = x - 1;
-            que.front().y = y;
-            que.push(que.front());
-        &#125;
-        que.pop();
-    &#125;;
-    return;
-&#125;
-
-int main()
-&#123;
-    location *first = (location*)malloc(sizeof(location));
-    first-&gt;x = 0;
-    first-&gt;y = 0;
-    for (int i = 0; i &lt;= MAX; i++)
-        for (int j = 0; j &lt;= MAX; j++)
-            first-&gt;store[i][j] = 0;
-    //不懂为什么申请了内存空间后，struct里面数组初始化无效所以只能在这里用for初始化了
-    first-&gt;store[0][0] = 1;
-    que.push(*first);
-    judge();
-    return 0;
-&#125;
-</code></pre>
-<p>输入为n*n的地图</p>
-<p>输出为解法，如下图</p>
-<p>
-        <span class="lazyload-img-span">
-        <img   
-           data-src="https://pic.imgdb.cn/item/60c465a8844ef46bb26966f3.jpg" >
-        </sapn>
-      </p>
-<p>这只是不到3个小时写的粗品，可能有很多不足的地方，但是看见它能跑起来，心中已经很开心了</p>
-<p>记得以前在OJ上面做过的一道题，给一个n*n大小的格子，每个格子有一个值，从左上走到右下，哪条路线加起来的和最大，当时那个程序我是用递归+回溯写的，因为以前对于BFS的掌握不好，所以也不经常用</p>
-<p>现在终于用BFS实现了类似的功能</p>
-<p>也是遇到了一些问题，比如</p>
-<p>为什么申请了内存空间后，struct里面数组初始化无效之类的</p>
-<p>但是我感觉了解了这个算法的大致架构，思路，其实还是最重要的</p>
-<p>就这样啦，继续努力</p>
-]]></content>
-      <tags>
-        <tag>算法,BFS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BFS</title>
     <url>/2021/06/11/BFS/</url>
     <content><![CDATA[<h1 id="回顾广度优先搜索"><a href="#回顾广度优先搜索" class="headerlink" title="回顾广度优先搜索"></a>回顾广度优先搜索</h1><p>好久没好好学学算法了，今天想写一个八皇后，发现啥也不会了，遂打算重新复习一下，就写了一下今天的广度优先搜索，实现的功能很简单，从N*N的表中找出最大的数(当然不是for的那种)</p>
@@ -409,6 +222,193 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>BFS走迷宫</title>
+    <url>/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/</url>
+    <content><![CDATA[<h1 id="BFS走迷宫"><a href="#BFS走迷宫" class="headerlink" title="BFS走迷宫"></a>BFS走迷宫</h1><p>今天上午考完CET4，终于可以暂时放下英语好好的研究算法了</p>
+<p>本来想复习复习dfs结果看见了别人写的走迷宫，心生羡慕，那我自己也写一个吧</p>
+<p>程序如下</p>
+<pre><code class="c++">#include &lt;iostream&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+
+#define MAX 10//MAX为地图大小
+
+int a[MAX][MAX] = &#123;
+    &#123;1,1,1,1,1,1,1,1,1,1&#125;,
+    &#123;0,1,1,0,0,0,1,0,1,1&#125;,
+    &#123;0,1,1,1,0,0,1,1,1,1&#125;,
+    &#123;0,1,0,0,0,0,1,0,0,0&#125;,
+    &#123;0,1,1,1,1,1,0,0,0,0&#125;,
+    &#123;0,1,1,0,1,1,1,0,0,0&#125;,
+    &#123;0,1,0,0,1,1,1,0,0,0&#125;,
+    &#123;0,1,1,0,0,0,1,0,0,0&#125;,
+    &#123;0,1,0,0,0,1,1,0,0,0&#125;,
+    &#123;0,1,1,0,0,1,1,1,1,1&#125;,
+&#125;;//地图，1为可走，0不可走
+int b[MAX][MAX] = &#123; 0 &#125;;//记录数组
+int temp;
+int sum;
+
+struct location 
+&#123;
+    int x;
+    int y;
+    int store[100][100];
+&#125;;
+
+queue&lt;location&gt; que;
+
+void judge()
+&#123;
+    while(!que.empty())
+    &#123;
+        int x = que.front().x, y = que.front().y;
+        que.front().store[x][y] = 1;
+        b[x][y] = 1;
+        if (x == MAX - 1 &amp;&amp; y == MAX - 1)
+        &#123;
+            for (int i = 0; i &lt;= MAX - 1; i++)
+            &#123;
+                for (int j = 0; j &lt;= MAX - 1; j++)
+                    printf(&quot;%d  &quot;, que.front().store[i][j]);
+                printf(&quot;\n&quot;);
+            &#125;
+            printf(&quot;\n&quot;);
+        &#125;
+        if ((y + 1 &lt; MAX) &amp;&amp; (a[x][y+1]) &amp;&amp; (!b[x][y + 1]))
+        &#123;
+            que.front().y = y + 1;
+            que.front().x = x;
+            que.push(que.front());
+        &#125;
+        if ((x + 1 &lt; MAX) &amp;&amp; (a[x + 1][y]) &amp;&amp; (!b[x + 1][y]))
+        &#123;
+            que.front().x = x + 1;
+            que.front().y = y;
+            que.push(que.front());
+        &#125;
+        if ((y &gt; 0) &amp;&amp; a[x][y-1] != 0 &amp;&amp; b[x][y - 1] != 1)
+        &#123;
+            que.front().y = y - 1;
+            que.front().x = x;
+            que.push(que.front());
+        &#125;
+        if ((x &gt; 0) &amp;&amp; a[x-1][y] != 0 &amp;&amp; b[x - 1][y] != 1)
+        &#123;
+            que.front().x = x - 1;
+            que.front().y = y;
+            que.push(que.front());
+        &#125;
+        que.pop();
+    &#125;;
+    return;
+&#125;
+
+int main()
+&#123;
+    location *first = (location*)malloc(sizeof(location));
+    first-&gt;x = 0;
+    first-&gt;y = 0;
+    for (int i = 0; i &lt;= MAX; i++)
+        for (int j = 0; j &lt;= MAX; j++)
+            first-&gt;store[i][j] = 0;
+    //不懂为什么申请了内存空间后，struct里面数组初始化无效所以只能在这里用for初始化了
+    first-&gt;store[0][0] = 1;
+    que.push(*first);
+    judge();
+    return 0;
+&#125;
+</code></pre>
+<p>输入为n*n的地图</p>
+<p>输出为解法，如下图</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://pic.imgdb.cn/item/60c465a8844ef46bb26966f3.jpg" >
+        </sapn>
+      </p>
+<p>这只是不到3个小时写的粗品，可能有很多不足的地方，但是看见它能跑起来，心中已经很开心了</p>
+<p>记得以前在OJ上面做过的一道题，给一个n*n大小的格子，每个格子有一个值，从左上走到右下，哪条路线加起来的和最大，当时那个程序我是用递归+回溯写的，因为以前对于BFS的掌握不好，所以也不经常用</p>
+<p>现在终于用BFS实现了类似的功能</p>
+<p>也是遇到了一些问题，比如</p>
+<p>为什么申请了内存空间后，struct里面数组初始化无效之类的</p>
+<p>但是我感觉了解了这个算法的大致架构，思路，其实还是最重要的</p>
+<p>就这样啦，继续努力</p>
+]]></content>
+      <tags>
+        <tag>算法,BFS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>55-210长焦镜头体验</title>
+    <url>/2021/04/10/55-210%E9%95%BF%E7%84%A6%E9%95%9C%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
+    <content><![CDATA[<h1 id="55-210平民狗头体验"><a href="#55-210平民狗头体验" class="headerlink" title="55-210平民狗头体验"></a>55-210平民狗头体验</h1><blockquote>
+<p>这些日子特别想要一个长焦，但是E口的镜头一般不便宜，nex转接环加性价比较高的美能达是一个不错的选择，但是美能达毕竟是老镜头，18-105或者18-135即使在二手平台上也不便宜，18-200确实便宜，但是已经有18-55了，仔细对比还是55-210最香，价格也只是18-200的一半，虽然大家都说画质肉，但是其作为原生E口长焦，和600的价格实在是很香了。</p>
+</blockquote>
+<h2 id="0-开箱"><a href="#0-开箱" class="headerlink" title="0.开箱"></a>0.开箱</h2><p>先看看外观</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd78322e6675c5c77e1.jpg" >
+        </sapn>
+      </p>
+<p>整个镜头的大小不算小，加上遮光罩有20厘米左右，银色的镜头没有黑色的好看，但是价格却比黑色的便宜不少，实用主义者还是选择银色好点</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fa.jpg" >
+        </sapn>
+      </p>
+<p>镜头不是恒定光圈，最大光圈f4.5，支持光学防抖，焦段55-210，等效83-315，废话就不多说了，参数网上都有，下面来看看样片</p>
+<h2 id="1-样片"><a href="#1-样片" class="headerlink" title="1.样片"></a>1.样片</h2><p>首先来看看中老年人摄影</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c75fd.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/200    ISO:200    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>总的来讲210焦段能在这个水平，还是很不错的，不放大看细节，总体很完美，但是仔细看会发现月球的细节基本看不见，边缘色散有些严重，对得起600的价格</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7603.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/5.6    曝光时间:1/800    ISO:200    焦段:142 图片经过后期处理</p>
+</blockquote>
+<p>这张照片我自认为拍的挺好的，55-210这个头在中焦段的表现还是不错的，焦外奶化也还可以，焦内虽说不能和G头比但是还算锐利</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c760b.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>这张焦外就挺完美的虽说是f/6.3的光圈，但是在210焦段景深就非常完美了，但是仔细看边缘，色散还是较为严重</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://img.imgdb.cn/item/60703cd58322e6675c5c7615.jpg" >
+        </sapn>
+      </p>
+<blockquote>
+<p>光圈:f/6.3    曝光时间:1/400    ISO:2500    焦段:210 图片经过后期处理</p>
+</blockquote>
+<p>老年人打鸟，效果还不错</p>
+<h2 id="2-总结"><a href="#2-总结" class="headerlink" title="2.总结"></a>2.总结</h2><p>总的来讲，这颗头的性价比还是挺不错的，是一个对于索尼E口相机练手的长焦镜头，即使以后要换镜头，出掉倒也不心疼.</p>
+]]></content>
+      <tags>
+        <tag>体验,评测</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github Pages实时新闻推荐</title>
     <url>/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</url>
     <content><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p>
@@ -466,51 +466,6 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python日记</title>
-    <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
-<p>写了一个可以对服务器发送post请求的小程序</p>
-<pre><code class="python">import urllib
-import urllib.request
-
-def sendpost(url):
-    head = &#123;
-        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;
-        &#125;
-    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)
-    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)
-    response = urllib.request.urlopen(request)
-    print(response.read())
-
-if __name__ == &quot;__main__&quot;:
-    sendpost(&quot;http://httpbin.org/post&quot;)
-</code></pre>
-<p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p>
-<p>下面是基于requests库编写的功能差不多的小程序</p>
-<pre><code class="python">import requests
-
-def sendpost(url):
-    head=&#123;
-    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,
-    &quot;Content-Type&quot;: &quot;application/json&quot;
-    &#125;
-    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;
-    try:
-        request = requests.post(url=url,headers=head,data=data)
-        print(request.content)
-    except Exception:
-        print(&quot;error&quot;,end=&quot;\n&quot;)
-
-if __name__ == &quot;__main__&quot;:
-    sendpost(&quot;http://httpbin.org/post&quot;)
-</code></pre>
-<p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>
-]]></content>
-      <tags>
-        <tag>程序,python</tag>
       </tags>
   </entry>
   <entry>
@@ -579,6 +534,65 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>镜头,评测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python日记</title>
+    <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
+<p>写了一个可以对服务器发送post请求的小程序</p>
+<pre><code class="python">import urllib
+import urllib.request
+
+def sendpost(url):
+    head = &#123;
+        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;
+        &#125;
+    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)
+    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)
+    response = urllib.request.urlopen(request)
+    print(response.read())
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p>
+<p>下面是基于requests库编写的功能差不多的小程序</p>
+<pre><code class="python">import requests
+
+def sendpost(url):
+    head=&#123;
+    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+    &#125;
+    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;
+    try:
+        request = requests.post(url=url,headers=head,data=data)
+        print(request.content)
+    except Exception:
+        print(&quot;error&quot;,end=&quot;\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>
+]]></content>
+      <tags>
+        <tag>程序,python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>做一个nodemcu wifi天气小闹钟</title>
+    <url>/2021/09/06/%E5%81%9A%E4%B8%80%E4%B8%AAnodemcu-wifi%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%97%B9%E9%92%9F/</url>
+    <content><![CDATA[<h1 id="Nodemcu-wifi天气闹钟"><a href="#Nodemcu-wifi天气闹钟" class="headerlink" title="Nodemcu wifi天气闹钟"></a>Nodemcu wifi天气闹钟</h1><p>​    假期在家，闲来无事，拿出了以前玩的开发板，在网上看到了别人的点阵屏小闹钟，甚是羡慕，便买了一个32<em>8的小点阵屏，通过四块8\</em>8的共阴点阵屏并联而成，由四个MAX7219驱动。</p>
+<p>​    项目开始的时候，傻傻的分不清MOSI和MISO，MISO( Master Input Slave Output )，MOSI(Master Output Slave Input)应该接MISO，而不是MOSI，然后引入LedControl.h库，点阵屏就成功驱动了，下了一个取模用的软件，便可以画图标了。</p>
+<p>​    时间模块方面，因为我只有四块点阵，所以只能用其中的两块作为时间显示，那该如何让数字偏移呢，这里需要用到cmath里面的pow()函数，即pow(2,n)偏移量为n，数字便会向左偏移n个像素点位置了，如此，时间模块便写好了。</p>
+<p>​    天气模块只需要画一些图标，请求api便可以实现，这里我采用了高德天气的api，用了一个arduino String模块自带的搜索对象，就不用再引入解析json的库了也方便了一些。</p>
+<p>​    大致就是如此了。</p>
+<p>​    <a href="https://www.bilibili.com/video/BV1yf4y1N7UA/">项目视频在这里呢</a></p>
+]]></content>
+      <tags>
+        <tag>DIY</tag>
       </tags>
   </entry>
   <entry>
@@ -683,20 +697,6 @@ int main()
 ]]></content>
       <tags>
         <tag>C艹</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>做一个nodemcu wifi天气小闹钟</title>
-    <url>/2021/09/06/%E5%81%9A%E4%B8%80%E4%B8%AAnodemcu-wifi%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%97%B9%E9%92%9F/</url>
-    <content><![CDATA[<h1 id="Nodemcu-wifi天气闹钟"><a href="#Nodemcu-wifi天气闹钟" class="headerlink" title="Nodemcu wifi天气闹钟"></a>Nodemcu wifi天气闹钟</h1><p>​    假期在家，闲来无事，拿出了以前玩的开发板，在网上看到了别人的点阵屏小闹钟，甚是羡慕，便买了一个32<em>8的小点阵屏，通过四块8\</em>8的共阴点阵屏并联而成，由四个MAX7219驱动。</p>
-<p>​    项目开始的时候，傻傻的分不清MOSI和MISO，MISO( Master Input Slave Output )，MOSI(Master Output Slave Input)应该接MISO，而不是MOSI，然后引入LedControl.h库，点阵屏就成功驱动了，下了一个取模用的软件，便可以画图标了。</p>
-<p>​    时间模块方面，因为我只有四块点阵，所以只能用其中的两块作为时间显示，那该如何让数字偏移呢，这里需要用到cmath里面的pow()函数，即pow(2,n)偏移量为n，数字便会向左偏移n个像素点位置了，如此，时间模块便写好了。</p>
-<p>​    天气模块只需要画一些图标，请求api便可以实现，这里我采用了高德天气的api，用了一个arduino String模块自带的搜索对象，就不用再引入解析json的库了也方便了一些。</p>
-<p>​    大致就是如此了。</p>
-<p>​    <a href="https://www.bilibili.com/video/BV1yf4y1N7UA/">项目视频在这里呢</a></p>
-]]></content>
-      <tags>
-        <tag>DIY</tag>
       </tags>
   </entry>
   <entry>
@@ -807,6 +807,20 @@ document.getElementById(&quot;sentence&quot;).innerHTML = sentences[Math.floor(M
 ]]></content>
       <tags>
         <tag>博客技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日常记录</title>
+    <url>/2021/10/09/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="日常记录"><a href="#日常记录" class="headerlink" title="日常记录"></a>日常记录</h3><p>​    今天是10月9日，寒露刚刚过去的第一天，最近的压力真的好大，我有些喘不过气。</p>
+<p>​    身为一名医学生，去年的学业考试考的并不好，而今年是我的第二年，正是拼搏的一年</p>
+<p>​    身为一名up主，好久没有更新视频，也没有精力去做</p>
+<p>​    身为男朋友，和谈了2年的女朋友前天分手了</p>
+<p>​    身为一个大创项目的开发，还有半年，但是现在我Android Studio还只停留在下载安装的水平</p>
+<p>​    希望未来可以变好吧</p>
+]]></content>
+      <tags>
+        <tag>日记</tag>
       </tags>
   </entry>
   <entry>
