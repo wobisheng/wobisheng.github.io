@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-26T17:14:14.000Z</updated>
+  <updated>2022-04-01T07:13:56.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,16 @@
     <link href="http://example.com/2022/03/26/%E6%9C%80%E8%BF%91/"/>
     <id>http://example.com/2022/03/26/%E6%9C%80%E8%BF%91/</id>
     <published>2022-03-26T14:30:40.000Z</published>
-    <updated>2022-03-26T17:14:14.000Z</updated>
+    <updated>2022-04-01T07:13:56.000Z</updated>
     
+    <content type="html"><![CDATA[<h1 id="最近"><a href="#最近" class="headerlink" title="最近"></a>最近</h1><p>好久没有写博客了，在这几个月里发生了好多事情</p><p>疫情再度来袭，学校再度封校，不知道什么时候可以解封，听说上海的病人要转移到我们这里，估计这个学期又是高中的一个学期</p><p>本来想骑行去苏州的计划也因疫情不得不取消，带来的相机和无人机不知道还能拿出来几次，唉</p><blockquote><p>青春能几年，疫情封三年。</p><p>许许多多的话只能任其烂在心里。</p><p>祖国加油吧。</p></blockquote><p>看了看上学期的博客，android studio已经学会了，基本的界面和程序已经可以成功运行了，但是今年的大创却没有报成。好多时候，真正的问题并不是存在于我们看到的地方，而隐藏在深处。</p><p>偶尔的小欢喜也难改变大大的苦闷。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;最近&quot;&gt;&lt;a href=&quot;#最近&quot; class=&quot;headerlink&quot; title=&quot;最近&quot;&gt;&lt;/a&gt;最近&lt;/h1&gt;&lt;p&gt;好久没有写博客了，在这几个月里发生了好多事情&lt;/p&gt;
+&lt;p&gt;疫情再度来袭，学校再度封校，不知道什么时候可以解封，听说上海的病人要转移到我们这</summary>
+      
     
     
     
