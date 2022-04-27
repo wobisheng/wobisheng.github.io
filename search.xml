@@ -427,48 +427,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Python日记(二)</title>
-    <url>/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/</url>
-    <content><![CDATA[<h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllib
-import urllib.request
-import re
-
-def send(url):
-    head=&#123;
-    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&quot;
-    &#125;
-    request = urllib.request.Request(url,headers = head)
-    response = urllib.request.urlopen(request).read()
-    match(response)
-
-def match(content):
-    con = re.findall(&#39;&lt;div class=&quot;title&quot;&gt;[^&gt;]*&gt;[^&gt;]*&gt;\n([^&lt;]*)&lt;&#39;,content.decode(&quot;utf-8&quot;))
-    for i in con:
-        try:
-            match = re.match(&#39;[\s]&#123;2,&#125;(.*)[\s]&#123;2,&#125;&#39;,i)
-            print(match.string,end=&quot;&quot;)
-        except Exception as result:
-            print(&quot;&quot;)
-
-if __name__ == &quot;__main__&quot;:
-    for page in range(0,250,25):
-        send(&quot;https://www.douban.com/doulist/240962/?start=%d&amp;sort=seq&amp;playable=0&amp;sub_type=&quot;%page)
-</code></pre>
-<p>​        最近学习了用python爬虫去爬取豆瓣“电影排行前100”的界面，初步学习了正则表达式(还是有许多不足不懂的地方，仅此记录一下)</p>
-<p>​        本来想用BeautifulSoup来爬取的，但是想到以后还得学习正则表达式，不如早点学早了事，下面是几个我遇到的问题.</p>
-<ol>
-<li><p>在使用re.findall()函数的时候若str直接用爬取的网页则会出现cannot use a string pattern on a bytes-like object错误，这个时候需要在后面加上decode(“utf-8”)来进行编码</p>
-</li>
-<li><p>re.match()返回的是match对象，这个时候若想输出string则需要用match.string的方法</p>
-<p>(有什么想写的再写)</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python日记</title>
     <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
@@ -579,6 +537,48 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>镜头,评测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python日记(二)</title>
+    <url>/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/</url>
+    <content><![CDATA[<h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllib
+import urllib.request
+import re
+
+def send(url):
+    head=&#123;
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&quot;
+    &#125;
+    request = urllib.request.Request(url,headers = head)
+    response = urllib.request.urlopen(request).read()
+    match(response)
+
+def match(content):
+    con = re.findall(&#39;&lt;div class=&quot;title&quot;&gt;[^&gt;]*&gt;[^&gt;]*&gt;\n([^&lt;]*)&lt;&#39;,content.decode(&quot;utf-8&quot;))
+    for i in con:
+        try:
+            match = re.match(&#39;[\s]&#123;2,&#125;(.*)[\s]&#123;2,&#125;&#39;,i)
+            print(match.string,end=&quot;&quot;)
+        except Exception as result:
+            print(&quot;&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    for page in range(0,250,25):
+        send(&quot;https://www.douban.com/doulist/240962/?start=%d&amp;sort=seq&amp;playable=0&amp;sub_type=&quot;%page)
+</code></pre>
+<p>​        最近学习了用python爬虫去爬取豆瓣“电影排行前100”的界面，初步学习了正则表达式(还是有许多不足不懂的地方，仅此记录一下)</p>
+<p>​        本来想用BeautifulSoup来爬取的，但是想到以后还得学习正则表达式，不如早点学早了事，下面是几个我遇到的问题.</p>
+<ol>
+<li><p>在使用re.findall()函数的时候若str直接用爬取的网页则会出现cannot use a string pattern on a bytes-like object错误，这个时候需要在后面加上decode(“utf-8”)来进行编码</p>
+</li>
+<li><p>re.match()返回的是match对象，这个时候若想输出string则需要用match.string的方法</p>
+<p>(有什么想写的再写)</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -759,9 +759,6 @@ int main()
     <url>/2021/10/09/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h3 id="日常记录"><a href="#日常记录" class="headerlink" title="日常记录"></a>日常记录</h3><p>​    今天是10月9日，寒露刚刚过去的第一天，最近的压力真的好大，我有些喘不过气。</p>
 <p>​    身为一名医学生，去年的学业考试考的并不好，而今年是我的第二年，正是拼搏的一年</p>
-<p>​    身为一名up主，好久没有更新视频，也没有精力去做</p>
-<p>​    身为男朋友，和谈了2年的女朋友前天分手了</p>
-<p>​    身为一个大创项目的开发，还有半年，但是现在我Android Studio还只停留在下载安装的水平</p>
 <p>​    希望未来可以变好吧</p>
 ]]></content>
       <tags>
@@ -785,20 +782,6 @@ int main()
       <tags>
         <tag>日记</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>疫情就在身边</title>
-    <url>/2021/07/31/%E7%96%AB%E6%83%85%E5%B0%B1%E5%9C%A8%E8%BA%AB%E8%BE%B9/</url>
-    <content><![CDATA[<h2 id="起自一场旅行"><a href="#起自一场旅行" class="headerlink" title="起自一场旅行"></a>起自一场旅行</h2><h4 id="7-20日，南京爆发了新冠病毒"><a href="#7-20日，南京爆发了新冠病毒" class="headerlink" title="7.20日，南京爆发了新冠病毒"></a>7.20日，南京爆发了新冠病毒</h4><h4 id="7-26日，因为提前买过了票，故去张家界旅游"><a href="#7-26日，因为提前买过了票，故去张家界旅游" class="headerlink" title="7.26日，因为提前买过了票，故去张家界旅游"></a>7.26日，因为提前买过了票，故去张家界旅游</h4><h4 id="7-29-30日，旅行社遣返回家"><a href="#7-29-30日，旅行社遣返回家" class="headerlink" title="7.29-30日，旅行社遣返回家"></a>7.29-30日，旅行社遣返回家</h4><p>以上便是我这几天的真实经历，我也因此需在家隔离14天，做6次核酸检测</p>
-<p>此次近距离接近疫情，我也真真切切感受到了疫情的可怕</p>
-<p>27号早上，在张家界国家森林公园里面拍了一上午队，景区人头攒动，排队排了好几个小时，人口密度大的难以想象，并且好多人并没有戴口罩，当时我在想，要是有一个人是确诊病例，那整个景区感染的人数不得上千了。</p>
-<p>27号中午，在张家界国家森林公园吃午饭，午饭的地点是地下的集体食堂，人来人往，排队打饭，因为要吃饭，所以没法戴口罩，并且是室内密闭空间，我心中忐忑，但还是找了个人少的地方，摘掉口罩，随便吃了一点。</p>
-<p>27号晚上，到凤凰县转了一圈，依然是可怕的人口密度，丝毫没有疫情的感觉。然而当晚我就得知，原来21-22号有一个确诊病例来过凤凰县，着实给我吓出一身冷汗。</p>
-<p>28号上午，去了苗寨，当地的导游并没有戴口罩。</p>
-<p>28号中午，国家发布信息，新冠变异株从南京禄口机场经过游客带到魅力湘西剧场，间接传播给好几个人。按照旅行社时间表，29号晚，我也要去魅力湘西，但此时我已经不打算去了，甚至有些想提前买票回家。</p>
-<p>29号上午，去天门山旅行，路上收到短信，飞机竟然取消了，中午导游跟大家说旅行紧急结束了，并且旅行社包了大巴，将大家送到了长沙，让我们明天就从长沙坐飞机回家，路上车上的氛围紧张极了，大家都很害怕在长沙能不能住宿，因为司机说长沙的宾馆看见从张家界来的就不收了</p>
-<p>大致旅程就是这样，现在我依然没有缓解过来，疫情或许远比大家想象的要严重，所以一定要做好防护。</p>
-]]></content>
   </entry>
   <entry>
     <title>给自己的博客加点料</title>
