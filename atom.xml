@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-01T07:13:56.000Z</updated>
+  <updated>2022-09-25T08:36:22.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一篇流水账</title>
+    <link href="http://example.com/2022/09/25/%E4%B8%80%E7%AF%87%E6%B5%81%E6%B0%B4%E8%B4%A6/"/>
+    <id>http://example.com/2022/09/25/%E4%B8%80%E7%AF%87%E6%B5%81%E6%B0%B4%E8%B4%A6/</id>
+    <published>2022-09-25T07:59:54.000Z</published>
+    <updated>2022-09-25T08:36:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>日常的念念碎</p></blockquote><p>上一条博客还是在2022年3月，那个时候还是大二的小学弟，转眼间已经成为大三学长了。</p><p>不知道大学两年怎么过的，总感觉想学点什么但什么也没学会，大一雄心壮志想考进年纪前20，两年过去了，草草混了两个三等奖学金就已经感觉很满意了。</p><p>不知道未来会怎么样，感觉挣钱也很难，生活也很难</p><p>偶然想起高三的某个下午，老师在黑板上涂涂画画，我在窗边做着数学题，窗户的外面是无比浪漫的晚霞</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;日常的念念碎&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;上一条博客还是在2022年3月，那个时候还是大二的小学弟，转眼间已经成为大三学长了。&lt;/p&gt;
+&lt;p&gt;不知道大学两年怎么过的，总感觉想学点什么但什么也没学会，大一雄心壮志想考进年纪前20，两年过</summary>
+      
+    
+    
+    
+    
+    <category term="日记" scheme="http://example.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>最近</title>
