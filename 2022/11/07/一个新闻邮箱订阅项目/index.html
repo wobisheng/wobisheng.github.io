@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  归档 |    发明家小站</title>
+  <title>  一个新闻邮件订阅项目 |    发明家小站</title>
   <meta name="description" content="发明家的小站 powered by hexo">
   <!-- 标签页图标 -->
   
@@ -157,50 +157,94 @@
 <div class="body-outer">
   <div class="body-inner">
     
+<article class="post-inner">
+  <div class="post-content-outer">
+    <div class="post-intro">
+      <div class="post-title animate__animated  animate__fadeInUp">一个新闻邮件订阅项目</div>
+      <div class="meta-intro animate__animated  animate__fadeInUp">Nov 07 2022</div>
+      
+        <div class="post-cover"><span class="lazyload-img-span"><img data-src="https://pic1.imgdb.cn/item/63690daa16f2c2beb18024de.png" class="post-cover-img"></span></div>
+      
+    </div>
+    <div class="post-content-inner">
+      <div class="post-content-inner-space">
 
-    <section class="archive-outer">
-    <section class="archive-inner">
+      </div>
+      <div class="post-content-main animate__animated  animate__fadeInUp">
+        <!-- top型目录 -->
         
-        
-        
-        
-            
-            
-        <div class="archive-name animate__animated  animate__fadeInUp">2022</div>
-        
-          <a  href="/2022/11/07/%E4%B8%80%E4%B8%AA%E6%96%B0%E9%97%BB%E9%82%AE%E7%AE%B1%E8%AE%A2%E9%98%85%E9%A1%B9%E7%9B%AE/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">一个新闻邮件订阅项目</div>
-            <div class="archive-post-date">11-07</div>
-            <!-- Nov 7 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/2022/09/25/%E4%B8%80%E7%AF%87%E6%B5%81%E6%B0%B4%E8%B4%A6/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">一篇流水账</div>
-            <div class="archive-post-date">09-25</div>
-            <!-- Sep 25 -->
-          </div>
-          </a>
-        
-        
-        
-          <a  href="/2022/03/26/%E6%9C%80%E8%BF%91/">
-          <div class="archive-post animate__animated  animate__fadeInUp">
-            <div class="archive-post-title">最近</div>
-            <div class="archive-post-date">03-26</div>
-            <!-- Mar 26 -->
-          </div>
-          </a>
-        
-        
-    </section>
-</section>
+        <h1 id="一个新闻邮件订阅小项目记录"><a href="#一个新闻邮件订阅小项目记录" class="headerlink" title="一个新闻邮件订阅小项目记录"></a>一个新闻邮件订阅小项目记录</h1><p>最近一周，腾讯云搞活动，看云函数标准版只要1.04米，于是租了一年。</p>
+<p>就那么放在那里也浪费，于是想着去做一个新闻邮件吧，正好每天可以早上起来看看新闻。</p>
+<p>了解了一下各个新闻网站，新加坡联合早报算是公认的客观，于是便选择了此作为新闻来源。</p>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>首先去<a target="_blank" rel="noopener" href="http://news.inventor.ink/">news.inventor.ink</a>输入自己的邮箱，然后每天早上八点便可以收到新加坡联合早报的新闻推送了。</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://pic1.imgdb.cn/item/63690daa16f2c2beb18024de.png" >
+        </sapn>
+      </p>
+<p>如果不想订阅了，可以点击下面的退订，然后输入邮箱退订。</p>
+<p>
+        <span class="lazyload-img-span">
+        <img   
+           data-src="https://pic1.imgdb.cn/item/63690daa16f2c2beb18024ee.png" >
+        </sapn>
+      </p>
+<h2 id="如何实现的"><a href="#如何实现的" class="headerlink" title="如何实现的"></a>如何实现的</h2><h5 id="基本构成"><a href="#基本构成" class="headerlink" title="基本构成"></a>基本构成</h5><p>这个项目在云函数中包含了两个函数，一个web函数用于订阅以及退订的网站，一个事件函数用于每天早上8点发送邮件，在这背后还有一个小小的数据库用来存放订阅者的邮箱。</p>
+<h5 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h5><p>发送邮件的函数其实就是一个小小的爬虫，他在每天早上八点钟回去访问一遍新加坡联合早报，并且保存新闻的标题，摘要，以及图片URL(如果没配图那就没URL)，接着他会去逐一请求每一张图片，进行base64编码(QQ邮箱为了防止&lt;img&gt;XSS攻击，所以只能用base64编码来显示图片)，最后发给每一个用户，也就成了每天早上收到的新闻邮件。</p>
+<h5 id="预防攻击"><a href="#预防攻击" class="headerlink" title="预防攻击"></a>预防攻击</h5><p>因为数据库不大，并且防止恶意请求提交假邮箱，我写了一些用来限制每日邮箱数目的代码，每日邮箱最多提交十个，并且web函数的并发不超过10个，以此来防止一些恶意请求。对于ssti攻击，有字符串以及正则表达式进行过滤处理。</p>
 
+        <!-- 分类文章 -->
+        
+      </div>
+      <div class="post-content-inner-space">
+        
+          <div class="space-toc-main animate__animated  animate__fadeInUp">
+            <ol class="space-toc"><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E7%94%A8%E6%B3%95"><span class="space-toc-text">用法</span></a></li><li class="space-toc-item space-toc-level-2"><a class="space-toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84"><span class="space-toc-text">如何实现的</span></a></li></ol>
+           </div>
+        
+      </div>
+   </div>
+    <!-- 评论 -->
+    
+    <div class="bottom-comments-outer">
+      <div class="bottom-comments-inner">
+        <!-- valine -->
+        
+          <section id="comments" class="comments" style="margin-top: 150px;">
+            <style>
+              .comments{background:#fff}
+              @media screen and (max-width:900px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var notify = 'true' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    new Valine({
+        av: AV,
+        el: '#vcomment',
+        notify: notify,
+        app_id: "MLTh10urf0WtnKAbKpFAlDom-gzGzoHsz",
+        app_key: "xrpFKjDUro35mNv0wfTkriRo",
+        placeholder: "说点什么吧~",
+        avatar:"robohash",
+    });
+</script>
 
+          </section>
+        
+        <!-- Gitalk -->
+        
+        <!-- livere -->
+        
+        </div>
+      </div>
+    
+  </div>
+</article>
   </div>
 </div>
 
