@@ -1,5 +1,6 @@
 (function(){
-	SStatus = true
+	SStatus = true;
+	explo_Status = false;
     var stage, textStage, form, input;
     var circles, textPixels, textFormed;
     var offsetX, offsetY, text;
@@ -103,23 +104,26 @@
     }
 
     function formText() {
+		if (explo_Status){
+			for(var i=textPixels.length , l=circles.length; i<l; i++) {
+				tweenCircle(circles[i], 'out');
+			}
+		}
         for(var i= 0, l=textPixels.length; i<l; i++) {
             circles[i].originX = offsetX + textPixels[i].x;
             circles[i].originY = offsetY + textPixels[i].y;
             tweenCircle(circles[i], 'in');
         }
+		
         textFormed = true;
         if(textPixels.length < circles.length) {
-            for(var j = textPixels.length; j<circles.length-100; j++) {
+            for(var j = textPixels.length; j<circles.length-textPixels.length/2; j++) {
                 circles[j].tween = TweenLite.to(circles[j], 0.4, {alpha: 0.1});
             }
         }
     }
 
     function explode() {
-        for(var i= 0, l=textPixels.length; i<l; i++) {
-            tweenCircle(circles[i], 'out');
-        }
         if(textPixels.length < circles.length) {
             for(var j = textPixels.length; j<circles.length; j++) {
                 circles[j].tween = TweenLite.to(circles[j], 0.5, {alpha: 1});
@@ -156,31 +160,27 @@
 
     window.onload = function() { 
 	init();
-	createText("HEY");
+	createText("Hola");
 	setTimeout(function (){
 	createText("MY.");},2000);
-	//setTimeout(function (){
-	//	explode();},3500);
 	setTimeout(function (){
-	createText("小宝贝");},4500);
+	createText("Little");},4500);
 	setTimeout(function (){
-		explode();},6000);
+	explo_Status = true;
+	createText("Princess");},7000);
 	setTimeout(function (){
-	createText("我们");},7000);
-    //setTimeout(function (){
-	//	explode();},8500);
+	createText("Time");},9000);
 	setTimeout(function (){
-		createText("已经");},9500);	
+	createText("Has");},10500);
 	setTimeout(function (){
-		createText("在一起了");},12000);
-	//setTimeout(function (){
-	//		explode();},13500);
+	createText("Passed");},12000);
 	setTimeout(function (){
-		createText(parseInt(date).toString(10)+"天");},14500);
-	//setTimeout(function (){
-	//		explode();},16500);
+		createText(parseInt(date).toString(10)+"days");},14500);
 	setTimeout(function (){
-		SStatus = false
+		explo_Status = false;
 		createText("偲&明");},17500);
+	setTimeout(function (){
+		SStatus = false;
+		createText("偲&明");},19500);
 	};
 })();
