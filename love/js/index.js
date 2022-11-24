@@ -1,4 +1,5 @@
 (function(){
+	SStatus = true
     var stage, textStage, form, input;
     var circles, textPixels, textFormed;
     var offsetX, offsetY, text;
@@ -6,13 +7,14 @@
 	var colors = colors_list[Math.floor(Math.random() * colors_list.length)]
     var date = Math.round(new Date());
     date = ((date/1000)-1575608448)/(24*3600);
+	var r= 6 + Math.random()*10;
     function init() {
         initStages();
         initText();
         initCircles();
         animate();
     }
-
+	
     // Init Canvas
     function initStages() {
         offsetX = (window.innerWidth-600)/2;
@@ -37,11 +39,10 @@
         circles = [];
         for(var i=0; i<1000; i++) {
             var circle = new createjs.Shape();
-            var r = 10;
             var x = window.innerWidth*Math.random();
             var y = window.innerHeight*Math.random();
             var color = colors[Math.floor(i%colors.length)];
-            var alpha = 0.2 + Math.random()*0.5;
+            var alpha = 0.2 + Math.random()*1;
             circle.alpha = alpha;
             circle.radius = r;
             circle.graphics.beginFill(color).drawCircle(0, 0, r);
@@ -64,23 +65,36 @@
     function tweenCircle(c, dir) {
         if(c.tween) c.tween.kill();
         if(dir == 'in') {
-            c.tween = TweenLite.to(c, 0.6, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 5, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
-                c.movement = 'jiggle';
+            c.tween = TweenLite.to(c, 0.8, {x: c.originX, y: c.originY, ease:Quad.easeInOut, alpha: 1, radius: 8, scaleX: 0.4, scaleY: 0.4, onComplete: function() {
+				if(SStatus){
+					c.movement = 'jiggle';
+				}
+				else{
+					c.movement = 'float';
+				}
                 tweenCircle(c);
             }});
         } else if(dir == 'out') {
-            c.tween = TweenLite.to(c, 0.8, {x: window.innerWidth*Math.random(), y: window.innerHeight*Math.random(), ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5, scaleX: 1, scaleY: 1, onComplete: function() {
+            c.tween = TweenLite.to(c, 0.8, {x: window.innerWidth*Math.random(), y: window.innerHeight*Math.random(), ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5, scaleX: 0.5, scaleY: 0.5, onComplete: function() {
                 c.movement = 'float';
                 tweenCircle(c);
             }});
         } else {
             if(c.movement == 'float') {
-                c.tween = TweenLite.to(c, 5 + Math.random()*3.5, {x: c.x + -100+Math.random()*200, y: c.y + -100+Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
+				if(SStatus){
+					c.tween = TweenLite.to(c, 5 + Math.random()*3.5, {x: c.x + -100 + Math.random()*200, y: c.y + -100 + Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
                     onComplete: function() {
                         tweenCircle(c);
                     }});
+				}
+				else{
+					c.tween = TweenLite.to(c, 1 + Math.random()*3.5, {x: c.x + Math.random()*200, y: c.y + -100 + Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
+                    onComplete: function() {
+                        tweenCircle(c);
+                    }});
+				}
             } else {
-                c.tween = TweenLite.to(c, 0.05, {x: c.originX + Math.random()*3, y: c.originY + Math.random()*3, ease:Quad.easeInOut,
+                c.tween = TweenLite.to(c, 0.05, {x: c.originX + Math.random()*2, y: c.originY + Math.random()*2, ease:Quad.easeInOut,
                     onComplete: function() {
                         tweenCircle(c);
                     }});
@@ -96,7 +110,7 @@
         }
         textFormed = true;
         if(textPixels.length < circles.length) {
-            for(var j = textPixels.length; j<circles.length; j++) {
+            for(var j = textPixels.length; j<circles.length-100; j++) {
                 circles[j].tween = TweenLite.to(circles[j], 0.4, {alpha: 0.1});
             }
         }
@@ -144,7 +158,7 @@
 	init();
 	createText("HEY");
 	setTimeout(function (){
-	createText("MY");},2000);
+	createText("MY.");},2000);
 	//setTimeout(function (){
 	//	explode();},3500);
 	setTimeout(function (){
@@ -159,13 +173,14 @@
 		createText("已经");},9500);	
 	setTimeout(function (){
 		createText("在一起了");},12000);
-	  setTimeout(function (){
-			explode();},13500);
+	//setTimeout(function (){
+	//		explode();},13500);
 	setTimeout(function (){
 		createText(parseInt(date).toString(10)+"天");},14500);
 	//setTimeout(function (){
 	//		explode();},16500);
 	setTimeout(function (){
+		SStatus = false
 		createText("偲&明");},17500);
 	};
 })();
