@@ -89,7 +89,7 @@
                     }});
 				}
 				else{
-					c.tween = TweenLite.to(c, 1 + Math.random()*3.5, {x: c.x + Math.random()*200, y: c.y + -100 + Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
+					c.tween = TweenLite.to(c, 1 + Math.random()*3.5, {x: c.x +100+ Math.random()*200, y: c.y + -100 + Math.random()*200, ease:Quad.easeInOut, alpha: 0.2 + Math.random()*0.5,
                     onComplete: function() {
                         tweenCircle(c);
                     }});
@@ -162,7 +162,7 @@
 	init();
 	createText("Hola");
 	setTimeout(function (){
-	createText("MY.");},2000);
+	createText("MY...");},2000);
 	setTimeout(function (){
 	createText("Little");},4500);
 	setTimeout(function (){
@@ -175,12 +175,21 @@
 	setTimeout(function (){
 	createText("Passed");},12000);
 	setTimeout(function (){
-		createText(parseInt(date).toString(10)+"days");},14500);
+		createText(parseInt(date/1000).toString(10));},13500);
 	setTimeout(function (){
 		explo_Status = false;
-		createText("偲&明");},17500);
+		createText(parseInt(date/100).toString(10));},14500);
+	setTimeout(function (){
+		createText(parseInt(date/10).toString(10));},15500);
+	setTimeout(function (){
+		createText(parseInt(date).toString(10));},16500);
+	setTimeout(function (){
+		createText(parseInt(date).toString(10)+'days');},17500);
+	setTimeout(function (){
+		explo_Status = false;
+		createText("偲&明");},19500);
 	setTimeout(function (){
 		SStatus = false;
-		createText("偲&明");},19500);
+		createText("偲&明");},20500);
 	};
 })();
