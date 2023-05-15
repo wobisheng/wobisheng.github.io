@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-11T04:23:42.000Z</updated>
+  <updated>2023-05-15T08:23:24.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>好想回到那个夏天，阳光正好，微风不燥</title>
+    <link href="http://example.com/2023/05/15/%E5%A5%BD%E6%83%B3%E5%9B%9E%E5%88%B0%E9%82%A3%E4%B8%AA%E5%A4%8F%E5%A4%A9%EF%BC%8C%E9%98%B3%E5%85%89%E6%AD%A3%E5%A5%BD%EF%BC%8C%E5%BE%AE%E9%A3%8E%E4%B8%8D%E7%87%A5/"/>
+    <id>http://example.com/2023/05/15/%E5%A5%BD%E6%83%B3%E5%9B%9E%E5%88%B0%E9%82%A3%E4%B8%AA%E5%A4%8F%E5%A4%A9%EF%BC%8C%E9%98%B3%E5%85%89%E6%AD%A3%E5%A5%BD%EF%BC%8C%E5%BE%AE%E9%A3%8E%E4%B8%8D%E7%87%A5/</id>
+    <published>2023-05-15T08:08:44.000Z</published>
+    <updated>2023-05-15T08:23:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>转眼间已经是大三下学期了</p><p>昨天晚上的见习晚会仿佛还在眼前，经过了三年的时光，马上就要离开这里还真有点舍不得</p><p>下午在实验室学习，窗外的树影与阳光让我回忆起高中夏日的一个正午</p><p>我看向窗外，阳光洒过树叶的间隙，天上是朵朵白云</p><p>PS:给博客加了完全随机的每日一句，感谢一言的API</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;转眼间已经是大三下学期了&lt;/p&gt;
+&lt;p&gt;昨天晚上的见习晚会仿佛还在眼前，经过了三年的时光，马上就要离开这里还真有点舍不得&lt;/p&gt;
+&lt;p&gt;下午在实验室学习，窗外的树影与阳光让我回忆起高中夏日的一个正午&lt;/p&gt;
+&lt;p&gt;我看向窗外，阳光洒过树叶的间隙，天上是朵朵白云&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>回忆</title>
@@ -38,9 +64,9 @@
     <link href="http://example.com/2022/11/07/%E4%B8%80%E4%B8%AA%E6%96%B0%E9%97%BB%E9%82%AE%E7%AE%B1%E8%AE%A2%E9%98%85%E9%A1%B9%E7%9B%AE/"/>
     <id>http://example.com/2022/11/07/%E4%B8%80%E4%B8%AA%E6%96%B0%E9%97%BB%E9%82%AE%E7%AE%B1%E8%AE%A2%E9%98%85%E9%A1%B9%E7%9B%AE/</id>
     <published>2022-11-07T13:51:09.000Z</published>
-    <updated>2022-11-07T14:19:42.000Z</updated>
+    <updated>2023-05-15T08:11:06.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="一个新闻邮件订阅小项目记录"><a href="#一个新闻邮件订阅小项目记录" class="headerlink" title="一个新闻邮件订阅小项目记录"></a>一个新闻邮件订阅小项目记录</h1><p>最近一周，腾讯云搞活动，看云函数标准版只要1.04米，于是租了一年。</p><p>就那么放在那里也浪费，于是想着去做一个新闻邮件吧，正好每天可以早上起来看看新闻。</p><p>了解了一下各个新闻网站，新加坡联合早报算是公认的客观，于是便选择了此作为新闻来源。</p><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>首先去<a href="http://news.inventor.ink/">news.inventor.ink</a>输入自己的邮箱，然后每天早上八点便可以收到新加坡联合早报的新闻推送了。</p><p>        <span class="lazyload-img-span">        <img              data-src="https://pic1.imgdb.cn/item/63690daa16f2c2beb18024de.png" >        </sapn>      </p><p>如果不想订阅了，可以点击下面的退订，然后输入邮箱退订。</p><p>        <span class="lazyload-img-span">        <img              data-src="https://pic1.imgdb.cn/item/63690daa16f2c2beb18024ee.png" >        </sapn>      </p><h2 id="如何实现的"><a href="#如何实现的" class="headerlink" title="如何实现的"></a>如何实现的</h2><h5 id="基本构成"><a href="#基本构成" class="headerlink" title="基本构成"></a>基本构成</h5><p>这个项目在云函数中包含了两个函数，一个web函数用于订阅以及退订的网站，一个事件函数用于每天早上8点发送邮件，在这背后还有一个小小的数据库用来存放订阅者的邮箱。</p><h5 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h5><p>发送邮件的函数其实就是一个小小的爬虫，他在每天早上八点钟回去访问一遍新加坡联合早报，并且保存新闻的标题，摘要，以及图片URL(如果没配图那就没URL)，接着他会去逐一请求每一张图片，进行base64编码(QQ邮箱为了防止&lt;img&gt;XSS攻击，所以只能用base64编码来显示图片)，最后发给每一个用户，也就成了每天早上收到的新闻邮件。</p><h5 id="预防攻击"><a href="#预防攻击" class="headerlink" title="预防攻击"></a>预防攻击</h5><p>因为数据库不大，并且防止恶意请求提交假邮箱，我写了一些用来限制每日邮箱数目的代码，每日邮箱最多提交十个，并且web函数的并发不超过10个，以此来防止一些恶意请求。对于ssti攻击，有字符串以及正则表达式进行过滤处理。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="一个新闻邮件订阅小项目记录"><a href="#一个新闻邮件订阅小项目记录" class="headerlink" title="一个新闻邮件订阅小项目记录"></a>一个新闻邮件订阅小项目记录</h1><p>最近一周，腾讯云搞活动，看云函数标准版只要1.04米，于是租了一年。</p><p>就那么放在那里也浪费，于是想着去做一个新闻邮件吧，正好每天可以早上起来看看新闻。</p><p>了解了一下各个新闻网站，新加坡联合早报算是公认的客观，于是便选择了此作为新闻来源。</p><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>首先去<a href="http://news.wobisheng.top/">news.wobisheng.top</a>输入自己的邮箱，然后每天早上八点便可以收到新加坡联合早报的新闻推送了。</p><p>        <span class="lazyload-img-span">        <img              data-src="https://pic1.imgdb.cn/item/63690daa16f2c2beb18024de.png" >        </sapn>      </p><p>如果不想订阅了，可以点击下面的退订，然后输入邮箱退订。</p><p>        <span class="lazyload-img-span">        <img              data-src="https://pic1.imgdb.cn/item/63690daa16f2c2beb18024ee.png" >        </sapn>      </p><h2 id="如何实现的"><a href="#如何实现的" class="headerlink" title="如何实现的"></a>如何实现的</h2><h5 id="基本构成"><a href="#基本构成" class="headerlink" title="基本构成"></a>基本构成</h5><p>这个项目在云函数中包含了两个函数，一个web函数用于订阅以及退订的网站，一个事件函数用于每天早上8点发送邮件，在这背后还有一个小小的数据库用来存放订阅者的邮箱。</p><h5 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h5><p>发送邮件的函数其实就是一个小小的爬虫，他在每天早上八点钟回去访问一遍新加坡联合早报，并且保存新闻的标题，摘要，以及图片URL(如果没配图那就没URL)，接着他会去逐一请求每一张图片，进行base64编码(QQ邮箱为了防止&lt;img&gt;XSS攻击，所以只能用base64编码来显示图片)，最后发给每一个用户，也就成了每天早上收到的新闻邮件。</p><h5 id="预防攻击"><a href="#预防攻击" class="headerlink" title="预防攻击"></a>预防攻击</h5><p>因为数据库不大，并且防止恶意请求提交假邮箱，我写了一些用来限制每日邮箱数目的代码，每日邮箱最多提交十个，并且web函数的并发不超过10个，以此来防止一些恶意请求。对于ssti攻击，有字符串以及正则表达式进行过滤处理。</p>]]></content>
     
     
       
@@ -441,28 +467,6 @@
     
     
     <category term="博客技术" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>岁月神偷</title>
-    <link href="http://example.com/2021/02/06/%E5%B2%81%E6%9C%88%E7%A5%9E%E5%81%B7/"/>
-    <id>http://example.com/2021/02/06/%E5%B2%81%E6%9C%88%E7%A5%9E%E5%81%B7/</id>
-    <published>2021-02-06T03:50:21.000Z</published>
-    <updated>2021-02-06T03:57:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="措不及防的是时间"><a href="#措不及防的是时间" class="headerlink" title="措不及防的是时间"></a>措不及防的是时间</h2><p>好久好久又没有写博客了，<br>转眼间时间又过去了大半年，<br>想了想之前租的一年的学生机也快到期了，<br>与其这样浪费钱倒不如在github pages上写点东西(哈哈哈哈毕竟是免费的）</p><p>哎，时间是真的很快，有时候其实想写写博客的，<br>但是打开网站却又不知道该写点什么，看着对话框发呆，<br>这新的一年马上又要开始了。</p><p>希望可以在新的一年里可以好好写博客吧，<br>哈哈哈哈哈，从2016年到现在都快5年了，<br>换了好几家服务器供应商，还是没坚持下来<br>加油吧，我们</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;措不及防的是时间&quot;&gt;&lt;a href=&quot;#措不及防的是时间&quot; class=&quot;headerlink&quot; title=&quot;措不及防的是时间&quot;&gt;&lt;/a&gt;措不及防的是时间&lt;/h2&gt;&lt;p&gt;好久好久又没有写博客了，&lt;br&gt;转眼间时间又过去了大半年，&lt;br&gt;想了想之前租的一年的学生机</summary>
-      
-    
-    
-    
-    
-    <category term="日记" scheme="http://example.com/tags/%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   

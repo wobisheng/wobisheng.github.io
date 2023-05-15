@@ -9,6 +9,10 @@
     var date = Math.round(new Date());
     date = ((date/1000)-1575561600)/(24*3600);
 	var r= 6 + Math.random()*10;
+	function print_color()
+	{
+		console.log(colors)
+	}
     function init() {
         initStages();
         initText();
