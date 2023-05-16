@@ -302,32 +302,22 @@ int main()
       <div class="bottom-comments-inner">
         <!-- valine -->
         
-          <section id="comments" class="comments" style="margin-top: 150px;">
-            <style>
-              .comments{background:#fff}
-              @media screen and (max-width:900px){.comments{margin:auto;padding:10px;background:#fff}}
-            </style>
-            <div id="vcomment" class="comment"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-    var notify = 'true' == true ? true : false;
-    var verify = 'false' == true ? true : false;
-    new Valine({
-        av: AV,
-        el: '#vcomment',
-        notify: notify,
-        app_id: "MLTh10urf0WtnKAbKpFAlDom-gzGzoHsz",
-        app_key: "xrpFKjDUro35mNv0wfTkriRo",
-        placeholder: "说点什么吧~",
-        avatar:"robohash",
-    });
-</script>
-
-          </section>
-        
         <!-- Gitalk -->
+        
+          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<div id="gitalk-container" style="margin-top: 100px;"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '31945d07b18b7eaf03d2',
+        clientSecret: 'b79fae468c76d0921f1c6c98cd89ee0652ae170f',
+        id: window.location.pathname,
+        repo: 'blog_jump',
+        owner: 'wobisheng',
+        admin: 'wobisheng'
+    })
+    gitalk.render('gitalk-container')
+</script>
         
         <!-- livere -->
         
