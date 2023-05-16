@@ -290,51 +290,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Python日记</title>
-    <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
-<p>写了一个可以对服务器发送post请求的小程序</p>
-<pre><code class="python">import urllib
-import urllib.request
-
-def sendpost(url):
-    head = &#123;
-        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;
-        &#125;
-    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)
-    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)
-    response = urllib.request.urlopen(request)
-    print(response.read())
-
-if __name__ == &quot;__main__&quot;:
-    sendpost(&quot;http://httpbin.org/post&quot;)
-</code></pre>
-<p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p>
-<p>下面是基于requests库编写的功能差不多的小程序</p>
-<pre><code class="python">import requests
-
-def sendpost(url):
-    head=&#123;
-    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,
-    &quot;Content-Type&quot;: &quot;application/json&quot;
-    &#125;
-    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;
-    try:
-        request = requests.post(url=url,headers=head,data=data)
-        print(request.content)
-    except Exception:
-        print(&quot;error&quot;,end=&quot;\n&quot;)
-
-if __name__ == &quot;__main__&quot;:
-    sendpost(&quot;http://httpbin.org/post&quot;)
-</code></pre>
-<p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>
-]]></content>
-      <tags>
-        <tag>程序,python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BFS走迷宫</title>
     <url>/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/</url>
     <content><![CDATA[<h1 id="BFS走迷宫"><a href="#BFS走迷宫" class="headerlink" title="BFS走迷宫"></a>BFS走迷宫</h1><p>今天上午考完CET4，终于可以暂时放下英语好好的研究算法了</p>
@@ -454,6 +409,24 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>Github Pages实时新闻推荐</title>
+    <url>/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p>
+<p>并且打算在未来添加一个可以回顾过去每一天新闻的功能。</p>
+<p>先来看看成果吧，点一下导航栏上面的<a href="https://wobisheng.github.io/news.html">实时新闻</a>即可体验了。</p>
+<p>说一下大致过程的吧</p>
+<p>服务器每天定时任务爬取百度头条，数据生成接口，网页解析接口json生成新闻</p>
+<h4 id="下面说说我遇到的一些问题"><a href="#下面说说我遇到的一些问题" class="headerlink" title="下面说说我遇到的一些问题"></a>下面说说我遇到的一些问题</h4><p>一是静态界面如何获取接口信息的问题，因为我过去获取接口信息一直用的php，所以之前我一直在思考如何在github pages上面用静态界面获取接口信息，这个时候，我遇到了jQuery</p>
+<p>二是最开始，我想用docker来运行这个项目，一个docker运行nginx另一个跑python，但是两个容器之间进行连接并不是一个容易的事情，遂放弃docker直接投奔nginx</p>
+<p>三是js跨域的问题，开始我尝试了各种方法，服务器一直不给我传数据，打开开发者工具，检查后发现是因为nginx的配置文件中并没有添加 Access-Control-Allow-Origin的许可，终于，接口的数据可以在网页中被读取了</p>
+<p>四是mixed-content的问题，是因为github pages是https而我的接口是http导致的，遂向<a href="https://elstec.cn/">节操</a>借了一个子域，勉勉强强凑了一个ssl，大功告成</p>
+<p>期待下一个项目</p>
+]]></content>
+      <tags>
+        <tag>开发,技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python日记(二)</title>
     <url>/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/</url>
     <content><![CDATA[<h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllib
@@ -496,21 +469,48 @@ if __name__ == &quot;__main__&quot;:
       </tags>
   </entry>
   <entry>
-    <title>Github Pages实时新闻推荐</title>
-    <url>/2021/06/03/Github-Pages%E5%AE%9E%E6%97%B6%E6%96%B0%E9%97%BB%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<h1 id="Github-Pages实时新闻推荐"><a href="#Github-Pages实时新闻推荐" class="headerlink" title="Github Pages实时新闻推荐"></a>Github Pages实时新闻推荐</h1><p>这些天学了爬虫，心里就一直想做点什么，于是乎开发了一个在github pages上也可以实时更新新闻头条的功能。</p>
-<p>并且打算在未来添加一个可以回顾过去每一天新闻的功能。</p>
-<p>先来看看成果吧，点一下导航栏上面的<a href="https://wobisheng.github.io/news.html">实时新闻</a>即可体验了。</p>
-<p>说一下大致过程的吧</p>
-<p>服务器每天定时任务爬取百度头条，数据生成接口，网页解析接口json生成新闻</p>
-<h4 id="下面说说我遇到的一些问题"><a href="#下面说说我遇到的一些问题" class="headerlink" title="下面说说我遇到的一些问题"></a>下面说说我遇到的一些问题</h4><p>一是静态界面如何获取接口信息的问题，因为我过去获取接口信息一直用的php，所以之前我一直在思考如何在github pages上面用静态界面获取接口信息，这个时候，我遇到了jQuery</p>
-<p>二是最开始，我想用docker来运行这个项目，一个docker运行nginx另一个跑python，但是两个容器之间进行连接并不是一个容易的事情，遂放弃docker直接投奔nginx</p>
-<p>三是js跨域的问题，开始我尝试了各种方法，服务器一直不给我传数据，打开开发者工具，检查后发现是因为nginx的配置文件中并没有添加 Access-Control-Allow-Origin的许可，终于，接口的数据可以在网页中被读取了</p>
-<p>四是mixed-content的问题，是因为github pages是https而我的接口是http导致的，遂向<a href="https://elstec.cn/">节操</a>借了一个子域，勉勉强强凑了一个ssl，大功告成</p>
-<p>期待下一个项目</p>
+    <title>Python日记</title>
+    <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
+<p>写了一个可以对服务器发送post请求的小程序</p>
+<pre><code class="python">import urllib
+import urllib.request
+
+def sendpost(url):
+    head = &#123;
+        &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;
+        &#125;
+    data = bytes(urllib.parse.urlencode(&#123;&quot;username&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;&#125;),encoding = &quot;utf-8&quot;)
+    request = urllib.request.Request(url,data=data,headers = head,method=&quot;post&quot;)
+    response = urllib.request.urlopen(request)
+    print(response.read())
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>这个是urllib库写的，如果服务器有authorization验证还可以加一个base64库加密一下用户名和密码然后添加至header上</p>
+<p>下面是基于requests库编写的功能差不多的小程序</p>
+<pre><code class="python">import requests
+
+def sendpost(url):
+    head=&#123;
+    &quot;ua&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+    &#125;
+    data=&#123;&quot;username&quot;:&quot;1&quot;,&quot;password&quot;:&quot;1&quot;&#125;
+    try:
+        request = requests.post(url=url,headers=head,data=data)
+        print(request.content)
+    except Exception:
+        print(&quot;error&quot;,end=&quot;\n&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    sendpost(&quot;http://httpbin.org/post&quot;)
+</code></pre>
+<p>相比较之下，我认为requests库较urllib库更易使用，并且当返回值不为200ok时，urllib库并不能(也可能是我没学到)提取服务器返回的错误json，而requests库却可以很轻松的使用json对象，并且requests库可以直接使用auth函数来实现上文中需要用base64库来完成的加密过程</p>
 ]]></content>
       <tags>
-        <tag>开发,技术</tag>
+        <tag>程序,python</tag>
       </tags>
   </entry>
   <entry>
@@ -768,8 +768,8 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>好想回到那个夏天，阳光正好，微风不燥</title>
-    <url>/2023/05/15/%E5%A5%BD%E6%83%B3%E5%9B%9E%E5%88%B0%E9%82%A3%E4%B8%AA%E5%A4%8F%E5%A4%A9%EF%BC%8C%E9%98%B3%E5%85%89%E6%AD%A3%E5%A5%BD%EF%BC%8C%E5%BE%AE%E9%A3%8E%E4%B8%8D%E7%87%A5/</url>
+    <title>好想回到那个夏天 阳光正好 微风不燥</title>
+    <url>/2023/05/15/%E5%A5%BD%E6%83%B3%E5%9B%9E%E5%88%B0%E9%82%A3%E4%B8%AA%E5%A4%8F%E5%A4%A9%20%E9%98%B3%E5%85%89%E6%AD%A3%E5%A5%BD%20%E5%BE%AE%E9%A3%8E%E4%B8%8D%E7%87%A5/</url>
     <content><![CDATA[<p>转眼间已经是大三下学期了</p>
 <p>昨天晚上的见习晚会仿佛还在眼前，经过了三年的时光，马上就要离开这里还真有点舍不得</p>
 <p>下午在实验室学习，窗外的树影与阳光让我回忆起高中夏日的一个正午</p>
@@ -821,12 +821,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>开学了</title>
-    <url>/2021/03/06/%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
-    <content><![CDATA[<h1 id="开学了"><a href="#开学了" class="headerlink" title="开学了"></a>开学了</h1><p>2021年3月，已经是大一下学期了，这一学期的事情有点多，但是经过了大一上学期的磨练，我已经有些许适应了大学的生活，新学期加油吧</p>
-]]></content>
-  </entry>
-  <entry>
     <title>日常记录</title>
     <url>/2021/10/09/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h3 id="日常记录"><a href="#日常记录" class="headerlink" title="日常记录"></a>日常记录</h3><p>​    今天是10月9日，寒露刚刚过去的第一天，最近的压力真的好大，我有些喘不过气。</p>
@@ -836,6 +830,12 @@ int main()
       <tags>
         <tag>日记</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>开学了</title>
+    <url>/2021/03/06/%E5%BC%80%E5%AD%A6%E4%BA%86/</url>
+    <content><![CDATA[<h1 id="开学了"><a href="#开学了" class="headerlink" title="开学了"></a>开学了</h1><p>2021年3月，已经是大一下学期了，这一学期的事情有点多，但是经过了大一上学期的磨练，我已经有些许适应了大学的生活，新学期加油吧</p>
+]]></content>
   </entry>
   <entry>
     <title>最近</title>
