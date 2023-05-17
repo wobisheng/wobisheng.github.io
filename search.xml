@@ -1,133 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BFS</title>
-    <url>/2021/06/11/BFS/</url>
-    <content><![CDATA[<h1 id="回顾广度优先搜索"><a href="#回顾广度优先搜索" class="headerlink" title="回顾广度优先搜索"></a>回顾广度优先搜索</h1><p>好久没好好学学算法了，今天想写一个八皇后，发现啥也不会了，遂打算重新复习一下，就写了一下今天的广度优先搜索，实现的功能很简单，从N*N的表中找出最大的数(当然不是for的那种)</p>
-<p>算法很拉，就拿这篇文章记录以下，我也没搞什么优化</p>
-<p>下面是代码</p>
-<pre><code class="c++">#include &lt;iostream&gt;
-#include &lt;queue&gt;
-
-using namespace std;
-#define MAX 6
-
-int a[MAX][MAX] = &#123;
-    &#123;3,2,5,6,4,90&#125;,
-    &#123;8,9,2,4,1,2&#125;,
-    &#123;5,60,4,7,0,5&#125;,
-    &#123;14,5,3,7,4,6&#125;,
-    &#123;1,2,3,4,5,7&#125;,
-    &#123;1,2,3,4,9,7&#125;,
-&#125;;
-int b[MAX+1][MAX+1];
-int temp;
-int sum;
-
-struct location &#123;
-    int x;
-    int y;
-&#125;;
-
-queue&lt;location&gt; que;
-
-void judge()
-&#123;
-    while(!que.empty())
-    &#123;
-        int x = que.front().x, y = que.front().y;
-        location temp;
-        if (sum &lt;= a[x][y]) sum = a[x][y];
-        if (x == MAX-1 &amp;&amp; y == MAX-1) break;
-        if ((x + 1 != MAX) &amp;&amp; (b[x + 1][y] != 1))
-        &#123;
-            temp.x = x + 1;
-            temp.y = y;
-            b[x + 1][y] = 1;
-            que.push(temp);
-        &#125;
-        if ((y + 1 != MAX) &amp;&amp; (b[x][y+1] != 1))
-        &#123;
-            temp.x = x;
-            temp.y = y + 1;
-            b[x][y+1] = 1;
-            que.push(temp);
-        &#125;
-        que.pop();
-    &#125;;
-    return;
-&#125;
-
-int main()
-&#123;
-    location first = &#123; 0,0 &#125;;
-    sum = a[0][0];
-    que.push(first);
-    judge();
-    printf(&quot;%d&quot;, sum);
-    return 0;
-&#125;
-</code></pre>
-<p>就这样啦，运行后是90</p>
-<h3 id="继昨天的算法，稍稍改进以下，就得到了一个算n-n格子有多少种走法的算法"><a href="#继昨天的算法，稍稍改进以下，就得到了一个算n-n格子有多少种走法的算法" class="headerlink" title="继昨天的算法，稍稍改进以下，就得到了一个算n*n格子有多少种走法的算法"></a>继昨天的算法，稍稍改进以下，就得到了一个算n*n格子有多少种走法的算法</h3><pre><code class="c++">#include &lt;iostream&gt;
-#include &lt;queue&gt;
-
-using namespace std;
-#define MAX 4
-
-int a[MAX][MAX] = &#123;0&#125;;
-int b[MAX+1][MAX+1];
-int temp;
-int n;
-int sum;
-
-struct location &#123;
-    int x;
-    int y;
-&#125;;
-
-queue&lt;location&gt; que;
-
-void judge()
-&#123;
-    while(!que.empty())
-    &#123;
-        int x = que.front().x, y = que.front().y;
-        location temp;
-        if (x == MAX - 1 &amp;&amp; y == MAX - 1) &#123; n++; &#125;
-        if ((x + 1 != MAX))
-        &#123;
-            temp.x = x + 1;
-            temp.y = y;
-            que.push(temp);
-        &#125;
-        if ((y + 1 != MAX))
-        &#123;
-            temp.x = x;
-            temp.y = y + 1;
-            que.push(temp);
-        &#125;
-        que.pop();
-    &#125;;
-    return;
-&#125;
-
-int main()
-&#123;
-    location first = &#123; 0,0 &#125;;
-    sum = a[0][0];
-    que.push(first);
-    judge();
-    printf(&quot;%d&quot;, n);
-    return 0;
-&#125;
-</code></pre>
-]]></content>
-      <tags>
-        <tag>算法,BFS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>35mm定焦cctv监控头体验</title>
     <url>/2021/02/25/35mm%E5%AE%9A%E7%84%A6cctv%E7%9B%91%E6%8E%A7%E5%A4%B4%E4%BD%93%E9%AA%8C/</url>
     <content><![CDATA[<h1 id="35mm-cctv监控头体验"><a href="#35mm-cctv监控头体验" class="headerlink" title="35mm cctv监控头体验"></a>35mm cctv监控头体验</h1><p>新的一年已经过去了，当然要好好奖励一下自己，随意翻着淘宝，想给自己看一个合适的E口头，转了半天，也没找到什么合适的</p>
@@ -290,6 +163,133 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>BFS</title>
+    <url>/2021/06/11/BFS/</url>
+    <content><![CDATA[<h1 id="回顾广度优先搜索"><a href="#回顾广度优先搜索" class="headerlink" title="回顾广度优先搜索"></a>回顾广度优先搜索</h1><p>好久没好好学学算法了，今天想写一个八皇后，发现啥也不会了，遂打算重新复习一下，就写了一下今天的广度优先搜索，实现的功能很简单，从N*N的表中找出最大的数(当然不是for的那种)</p>
+<p>算法很拉，就拿这篇文章记录以下，我也没搞什么优化</p>
+<p>下面是代码</p>
+<pre><code class="c++">#include &lt;iostream&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+#define MAX 6
+
+int a[MAX][MAX] = &#123;
+    &#123;3,2,5,6,4,90&#125;,
+    &#123;8,9,2,4,1,2&#125;,
+    &#123;5,60,4,7,0,5&#125;,
+    &#123;14,5,3,7,4,6&#125;,
+    &#123;1,2,3,4,5,7&#125;,
+    &#123;1,2,3,4,9,7&#125;,
+&#125;;
+int b[MAX+1][MAX+1];
+int temp;
+int sum;
+
+struct location &#123;
+    int x;
+    int y;
+&#125;;
+
+queue&lt;location&gt; que;
+
+void judge()
+&#123;
+    while(!que.empty())
+    &#123;
+        int x = que.front().x, y = que.front().y;
+        location temp;
+        if (sum &lt;= a[x][y]) sum = a[x][y];
+        if (x == MAX-1 &amp;&amp; y == MAX-1) break;
+        if ((x + 1 != MAX) &amp;&amp; (b[x + 1][y] != 1))
+        &#123;
+            temp.x = x + 1;
+            temp.y = y;
+            b[x + 1][y] = 1;
+            que.push(temp);
+        &#125;
+        if ((y + 1 != MAX) &amp;&amp; (b[x][y+1] != 1))
+        &#123;
+            temp.x = x;
+            temp.y = y + 1;
+            b[x][y+1] = 1;
+            que.push(temp);
+        &#125;
+        que.pop();
+    &#125;;
+    return;
+&#125;
+
+int main()
+&#123;
+    location first = &#123; 0,0 &#125;;
+    sum = a[0][0];
+    que.push(first);
+    judge();
+    printf(&quot;%d&quot;, sum);
+    return 0;
+&#125;
+</code></pre>
+<p>就这样啦，运行后是90</p>
+<h3 id="继昨天的算法，稍稍改进以下，就得到了一个算n-n格子有多少种走法的算法"><a href="#继昨天的算法，稍稍改进以下，就得到了一个算n-n格子有多少种走法的算法" class="headerlink" title="继昨天的算法，稍稍改进以下，就得到了一个算n*n格子有多少种走法的算法"></a>继昨天的算法，稍稍改进以下，就得到了一个算n*n格子有多少种走法的算法</h3><pre><code class="c++">#include &lt;iostream&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+#define MAX 4
+
+int a[MAX][MAX] = &#123;0&#125;;
+int b[MAX+1][MAX+1];
+int temp;
+int n;
+int sum;
+
+struct location &#123;
+    int x;
+    int y;
+&#125;;
+
+queue&lt;location&gt; que;
+
+void judge()
+&#123;
+    while(!que.empty())
+    &#123;
+        int x = que.front().x, y = que.front().y;
+        location temp;
+        if (x == MAX - 1 &amp;&amp; y == MAX - 1) &#123; n++; &#125;
+        if ((x + 1 != MAX))
+        &#123;
+            temp.x = x + 1;
+            temp.y = y;
+            que.push(temp);
+        &#125;
+        if ((y + 1 != MAX))
+        &#123;
+            temp.x = x;
+            temp.y = y + 1;
+            que.push(temp);
+        &#125;
+        que.pop();
+    &#125;;
+    return;
+&#125;
+
+int main()
+&#123;
+    location first = &#123; 0,0 &#125;;
+    sum = a[0][0];
+    que.push(first);
+    judge();
+    printf(&quot;%d&quot;, n);
+    return 0;
+&#125;
+</code></pre>
+]]></content>
+      <tags>
+        <tag>算法,BFS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BFS走迷宫</title>
     <url>/2021/06/12/BFS%E8%B5%B0%E8%BF%B7%E5%AE%AB/</url>
     <content><![CDATA[<h1 id="BFS走迷宫"><a href="#BFS走迷宫" class="headerlink" title="BFS走迷宫"></a>BFS走迷宫</h1><p>今天上午考完CET4，终于可以暂时放下英语好好的研究算法了</p>
@@ -427,6 +427,48 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>Python日记(二)</title>
+    <url>/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/</url>
+    <content><![CDATA[<h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllib
+import urllib.request
+import re
+
+def send(url):
+    head=&#123;
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&quot;
+    &#125;
+    request = urllib.request.Request(url,headers = head)
+    response = urllib.request.urlopen(request).read()
+    match(response)
+
+def match(content):
+    con = re.findall(&#39;&lt;div class=&quot;title&quot;&gt;[^&gt;]*&gt;[^&gt;]*&gt;\n([^&lt;]*)&lt;&#39;,content.decode(&quot;utf-8&quot;))
+    for i in con:
+        try:
+            match = re.match(&#39;[\s]&#123;2,&#125;(.*)[\s]&#123;2,&#125;&#39;,i)
+            print(match.string,end=&quot;&quot;)
+        except Exception as result:
+            print(&quot;&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    for page in range(0,250,25):
+        send(&quot;https://www.douban.com/doulist/240962/?start=%d&amp;sort=seq&amp;playable=0&amp;sub_type=&quot;%page)
+</code></pre>
+<p>​        最近学习了用python爬虫去爬取豆瓣“电影排行前100”的界面，初步学习了正则表达式(还是有许多不足不懂的地方，仅此记录一下)</p>
+<p>​        本来想用BeautifulSoup来爬取的，但是想到以后还得学习正则表达式，不如早点学早了事，下面是几个我遇到的问题.</p>
+<ol>
+<li><p>在使用re.findall()函数的时候若str直接用爬取的网页则会出现cannot use a string pattern on a bytes-like object错误，这个时候需要在后面加上decode(“utf-8”)来进行编码</p>
+</li>
+<li><p>re.match()返回的是match对象，这个时候若想输出string则需要用match.string的方法</p>
+<p>(有什么想写的再写)</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python日记</title>
     <url>/2021/04/25/Python%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="Python日记"><a href="#Python日记" class="headerlink" title="Python日记"></a>Python日记</h1><p>最近抽空学了一些爬虫有关的知识</p>
@@ -472,48 +514,6 @@ if __name__ == &quot;__main__&quot;:
       </tags>
   </entry>
   <entry>
-    <title>Python日记(二)</title>
-    <url>/2021/05/24/Python%E6%97%A5%E8%AE%B0-%E4%BA%8C/</url>
-    <content><![CDATA[<h1 id="python日记-二"><a href="#python日记-二" class="headerlink" title="python日记(二)"></a>python日记(二)</h1><pre><code class="python">import urllib
-import urllib.request
-import re
-
-def send(url):
-    head=&#123;
-    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&quot;
-    &#125;
-    request = urllib.request.Request(url,headers = head)
-    response = urllib.request.urlopen(request).read()
-    match(response)
-
-def match(content):
-    con = re.findall(&#39;&lt;div class=&quot;title&quot;&gt;[^&gt;]*&gt;[^&gt;]*&gt;\n([^&lt;]*)&lt;&#39;,content.decode(&quot;utf-8&quot;))
-    for i in con:
-        try:
-            match = re.match(&#39;[\s]&#123;2,&#125;(.*)[\s]&#123;2,&#125;&#39;,i)
-            print(match.string,end=&quot;&quot;)
-        except Exception as result:
-            print(&quot;&quot;)
-
-if __name__ == &quot;__main__&quot;:
-    for page in range(0,250,25):
-        send(&quot;https://www.douban.com/doulist/240962/?start=%d&amp;sort=seq&amp;playable=0&amp;sub_type=&quot;%page)
-</code></pre>
-<p>​        最近学习了用python爬虫去爬取豆瓣“电影排行前100”的界面，初步学习了正则表达式(还是有许多不足不懂的地方，仅此记录一下)</p>
-<p>​        本来想用BeautifulSoup来爬取的，但是想到以后还得学习正则表达式，不如早点学早了事，下面是几个我遇到的问题.</p>
-<ol>
-<li><p>在使用re.findall()函数的时候若str直接用爬取的网页则会出现cannot use a string pattern on a bytes-like object错误，这个时候需要在后面加上decode(“utf-8”)来进行编码</p>
-</li>
-<li><p>re.match()返回的是match对象，这个时候若想输出string则需要用match.string的方法</p>
-<p>(有什么想写的再写)</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个新闻邮件订阅项目</title>
     <url>/2022/11/07/%E4%B8%80%E4%B8%AA%E6%96%B0%E9%97%BB%E9%82%AE%E7%AE%B1%E8%AE%A2%E9%98%85%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<h1 id="一个新闻邮件订阅小项目记录"><a href="#一个新闻邮件订阅小项目记录" class="headerlink" title="一个新闻邮件订阅小项目记录"></a>一个新闻邮件订阅小项目记录</h1><p>最近一周，腾讯云搞活动，看云函数标准版只要1.04米，于是租了一年。</p>
@@ -554,20 +554,6 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>做一个nodemcu wifi天气小闹钟</title>
-    <url>/2021/09/06/%E5%81%9A%E4%B8%80%E4%B8%AAnodemcu-wifi%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%97%B9%E9%92%9F/</url>
-    <content><![CDATA[<h1 id="Nodemcu-wifi天气闹钟"><a href="#Nodemcu-wifi天气闹钟" class="headerlink" title="Nodemcu wifi天气闹钟"></a>Nodemcu wifi天气闹钟</h1><p>​    假期在家，闲来无事，拿出了以前玩的开发板，在网上看到了别人的点阵屏小闹钟，甚是羡慕，便买了一个32<em>8的小点阵屏，通过四块8\</em>8的共阴点阵屏并联而成，由四个MAX7219驱动。</p>
-<p>​    项目开始的时候，傻傻的分不清MOSI和MISO，MISO( Master Input Slave Output )，MOSI(Master Output Slave Input)应该接MISO，而不是MOSI，然后引入LedControl.h库，点阵屏就成功驱动了，下了一个取模用的软件，便可以画图标了。</p>
-<p>​    时间模块方面，因为我只有四块点阵，所以只能用其中的两块作为时间显示，那该如何让数字偏移呢，这里需要用到cmath里面的pow()函数，即pow(2,n)偏移量为n，数字便会向左偏移n个像素点位置了，如此，时间模块便写好了。</p>
-<p>​    天气模块只需要画一些图标，请求api便可以实现，这里我采用了高德天气的api，用了一个arduino String模块自带的搜索对象，就不用再引入解析json的库了也方便了一些。</p>
-<p>​    大致就是如此了。</p>
-<p>​    <a href="https://www.bilibili.com/video/BV1yf4y1N7UA/">项目视频在这里呢</a></p>
-]]></content>
-      <tags>
-        <tag>DIY</tag>
       </tags>
   </entry>
   <entry>
@@ -636,6 +622,20 @@ if __name__ == &quot;__main__&quot;:
 ]]></content>
       <tags>
         <tag>镜头,评测</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>做一个nodemcu wifi天气小闹钟</title>
+    <url>/2021/09/06/%E5%81%9A%E4%B8%80%E4%B8%AAnodemcu-wifi%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%97%B9%E9%92%9F/</url>
+    <content><![CDATA[<h1 id="Nodemcu-wifi天气闹钟"><a href="#Nodemcu-wifi天气闹钟" class="headerlink" title="Nodemcu wifi天气闹钟"></a>Nodemcu wifi天气闹钟</h1><p>​    假期在家，闲来无事，拿出了以前玩的开发板，在网上看到了别人的点阵屏小闹钟，甚是羡慕，便买了一个32<em>8的小点阵屏，通过四块8\</em>8的共阴点阵屏并联而成，由四个MAX7219驱动。</p>
+<p>​    项目开始的时候，傻傻的分不清MOSI和MISO，MISO( Master Input Slave Output )，MOSI(Master Output Slave Input)应该接MISO，而不是MOSI，然后引入LedControl.h库，点阵屏就成功驱动了，下了一个取模用的软件，便可以画图标了。</p>
+<p>​    时间模块方面，因为我只有四块点阵，所以只能用其中的两块作为时间显示，那该如何让数字偏移呢，这里需要用到cmath里面的pow()函数，即pow(2,n)偏移量为n，数字便会向左偏移n个像素点位置了，如此，时间模块便写好了。</p>
+<p>​    天气模块只需要画一些图标，请求api便可以实现，这里我采用了高德天气的api，用了一个arduino String模块自带的搜索对象，就不用再引入解析json的库了也方便了一些。</p>
+<p>​    大致就是如此了。</p>
+<p>​    <a href="https://www.bilibili.com/video/BV1yf4y1N7UA/">项目视频在这里呢</a></p>
+]]></content>
+      <tags>
+        <tag>DIY</tag>
       </tags>
   </entry>
   <entry>
