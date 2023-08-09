@@ -23,6 +23,10 @@ function get_service_status()
 	{send_color_to_service("Mongodb","#00B454");}
 	else
 	{send_color_to_service("Mongodb","#FF2300");}
+	if (content_service['cloud'] == "open")
+	{send_color_to_service("cloud","#00B454");}
+	else
+	{send_color_to_service("cloud","#FF2300");}
 	send_char_to_index('finish!')
 }
 function send_char_to_index(stringindex)
