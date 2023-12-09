@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-16T08:38:32.000Z</updated>
+  <updated>2023-12-09T02:32:54.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随身wifi折腾</title>
+    <link href="http://example.com/2023/12/09/%E9%9A%8F%E8%BA%ABwifi%E6%8A%98%E8%85%BE/"/>
+    <id>http://example.com/2023/12/09/%E9%9A%8F%E8%BA%ABwifi%E6%8A%98%E8%85%BE/</id>
+    <published>2023-12-09T02:29:10.000Z</published>
+    <updated>2023-12-09T02:32:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="随身wifi折腾"><a href="#随身wifi折腾" class="headerlink" title="随身wifi折腾"></a>随身wifi折腾</h1><blockquote><p>几个月前，网上冲浪的时候看见不少人在玩晓龙410的随身wifi,了解了一下居然有大佬把这个玩意的debian的刷机包整出来了，并且各种工具一应俱全，这部妥妥的便携Linux设备，除了内存和存储有点小，只有4+512MB，但是并不影响折腾，遂在网上花了点钱买了几个</p></blockquote><p>我购入的随身wifi有某飓，某某船，某机这三个</p><p>某飓的随身wifi自带sim卡槽，某某船和某机不自带sim卡槽，当然是可以自己焊接的，但是既然以及有某飓那样的卡槽随身wifi，那感觉也就没必要在自己焊接了，于是开始搭建各种好玩的东西</p><h3 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h3><p>扩展存储的方式将棒子改成迷你服务器，因为棒子自己只自带了4G的存储，于是可以通过usb外接的方式连接u盘，虽然只有usb2.0的速度，但是至少是可以扩充出来几十G的，本身的512MB内存可以通过swap增加至2G，安装docker并且把镜像目录设置为u盘目录，这个时候，随身wifi以及可以作为一个迷你服务器使用了，虽然性能不佳，但是跑青龙，jupyter-notebook之类的镜像是没问题的，但是rstudio，firefox远程浏览器，nukkit这类的就别想了，吃内存，并且因为swap内存速度慢，基本就是卡到怀疑人生。</p><h3 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h3><p>安装tightvncserver，lxde，novnc，实现一个在浏览器可以使用的Linux桌面系统，实测三者都安装完，存储还能剩下1.3G，可以部署一些便携的应用，比如hexo的博客，一些简单的需要gui支持的Linux应用，浏览器只能安装一些轻量浏览器，firefox这样的肯定是不行了，但是至少是可以作为一个可以学习的Linux桌面系统</p><p>        <span class="lazyload-img-span">        <img              data-src="https://pic.imgdb.cn/item/6573d12dc458853aef0cd1c3.png" >        </sapn>      </p><h3 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h3><p>因为某飓的随身wifi自带sim卡槽，于是购入物联网卡，卡一年的套餐费是10块钱1G，安上wifipumpkin3以及nmap等等渗透工具，搭建好内网穿透，妥妥的近源渗透神器，只要有5V1A电源，那就可以随时使用，控制千里之外的内网不是梦，甚至还可以通过wifipumpkin模拟附近网络获取重要数据。</p><p>        <span class="lazyload-img-span">        <img              data-src="https://pic.imgdb.cn/item/6573d12dc458853aef0cd2cd.png" >        </sapn>      </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;随身wifi折腾&quot;&gt;&lt;a href=&quot;#随身wifi折腾&quot; class=&quot;headerlink&quot; title=&quot;随身wifi折腾&quot;&gt;&lt;/a&gt;随身wifi折腾&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;几个月前，网上冲浪的时候看见不少人在玩晓龙410的随身wifi,了</summary>
+      
+    
+    
+    
+    
+    <category term="日志" scheme="http://example.com/tags/%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
   
   <entry>
     <title>好想回到那个夏天</title>
@@ -446,28 +469,6 @@
     
     
     <category term="日记" scheme="http://example.com/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>给自己的博客加点料</title>
-    <link href="http://example.com/2021/02/09/%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8A%A0%E7%82%B9%E6%96%99/"/>
-    <id>http://example.com/2021/02/09/%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%8A%A0%E7%82%B9%E6%96%99/</id>
-    <published>2021-02-09T04:36:46.000Z</published>
-    <updated>2021-02-25T07:19:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="给自己的博客加点料"><a href="#给自己的博客加点料" class="headerlink" title="给自己的博客加点料"></a>给自己的博客加点料</h3><p>今天有点无聊，看着博客感觉缺了点什么，想了想便感觉应该加一个随机句子推荐，这样可以让博客更有一点文艺气息，但是，众所周知，Github Pages是不支持php的，但这也无妨，javascript依然可以做到相同的效果，但是本人拙劣的写代码技术于编译器后面了(哈哈哈哈哈哈)。</p><h2 id="第一步-寻找添加句子的区域"><a href="#第一步-寻找添加句子的区域" class="headerlink" title="第一步 寻找添加句子的区域"></a>第一步 寻找添加句子的区域</h2><p>首先打开hexo博客的自定义文件夹(这里以我用的white主题为例)，找到themes/(你的主题名)/layout/_partial接着找到header.ejs(footer也可以)用你自己的编辑器打开</p><h2 id="第二步-添加代码"><a href="#第二步-添加代码" class="headerlink" title="第二步 添加代码"></a>第二步 添加代码</h2><p>找到博客顶部名字的区域，尝试加一个新的段落</p><pre><code>&lt;div&gt;........&lt;p id=&quot;sentence&quot;&gt;测试&lt;/p&gt;&lt;script src=&quot;/js/sen.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;</code></pre><p>在本地生成博客，自己观察，区域是不是合适，如果不合适，可以自己写一点style调整</p><h2 id="第三步-写js代码"><a href="#第三步-写js代码" class="headerlink" title="第三步 写js代码"></a>第三步 写js代码</h2><p>这里你们可以直接引用我的，就是在上述的script src=””里面把””里面改成<a href="https://wobisheng.github.io/js/sen.js">https://wobisheng.github.io/js/sen.js</a> 就可以了</p><p>当然你也可以自己写一点点代码放在主题的source/js文件夹里命名为sen.js</p><p>下面是具体代码(别在意我拙劣的代码技术)</p><pre><code>var number1 = Math.floor(Math.random() * 11);number1 = number1 + 1;if(number1 == 1)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;这城市风很大，孤独的人总是晚回家&quot;;&#125;else if(number1 == 2)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;我们都生活在阴沟里，但仍有人仰望星空&quot;;&#125;else if(number1 == 3)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;曾经以为，拥有是不容易的；后来才知道，原来舍弃更难。&quot;;&#125;else if(number1 == 4)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;人间不会有单纯的快乐，快乐总夹杂着烦恼和忧虑，人间也没有永远&quot;;&#125;else if(number1 == 5)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;珍惜身体，多锻炼，早睡早起，不停学习，不停旅行，即使腿脚未在路上，也要让心在路上&quot;;&#125;else if(number1 == 6)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;就这样与你告别，借万里青山，以之为隔，世世不见。&quot;;&#125;else if(number1 == 7)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;有一种感觉比失恋还要痛苦，叫做自作多情。&quot;;&#125;else if(number1 == 8)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;活着不一定要鲜艳，但一定要有自己的颜色&quot;;&#125;else if(number1 == 9)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;有时候，最痛苦的不是失去，而是得到以后并不快乐。&quot;;&#125;else if(number1 == 10)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;不尝试着做些能力之外的事情，就永远无法成长。&quot;;&#125;else if(number1 == 11)&#123;document.getElementById(&quot;sentence&quot;).innerHTML=&quot;外界事物纷至沓来，我敞开所有感官来接纳，但来者全是客&quot;;&#125;</code></pre><p>就那么多啦，谢谢大家</p><p>2月16日更新</p><p>看了LOGI大佬的评论，发现我还是短浅了，也没有代码优化意识</p><p>如果直接建立一个常量数组，那代码的效率会提升不少</p><p>而且可以直接在后面添加新的内容，不用去改前面的数字，很方便</p><p>代码如下</p><pre><code>const sentences = [&quot;这城市风很大，孤独的人总是晚回家&quot;, &quot;我们都生活在阴沟里，但仍有人仰望星空&quot;,&quot;曾经以为，拥有是不容易的；后来才知道，原来舍弃更难。&quot;,&quot;人间不会有单纯的快乐，快乐总夹杂着烦恼和忧虑，人间也没有永远&quot;,&quot;错落一身静宁，深海浮沉摘星&quot;,&quot;就这样与你告别，借万里青山，以之为隔，世世不见。&quot;,&quot;有一种感觉比失恋还要痛苦，叫做自作多情。&quot;,&quot;活着不一定要鲜艳，但一定要有自己的颜色&quot;,&quot;有时候，最痛苦的不是失去，而是得到以后并不快乐。&quot;,&quot;不尝试着做些能力之外的事情，就永远无法成长&quot;,&quot;外界事物纷至沓来，我敞开所有感官来接纳，但来者全是客&quot;];document.getElementById(&quot;sentence&quot;).innerHTML = sentences[Math.floor(Math.random() * sentences.length)];</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;给自己的博客加点料&quot;&gt;&lt;a href=&quot;#给自己的博客加点料&quot; class=&quot;headerlink&quot; title=&quot;给自己的博客加点料&quot;&gt;&lt;/a&gt;给自己的博客加点料&lt;/h3&gt;&lt;p&gt;今天有点无聊，看着博客感觉缺了点什么，想了想便感觉应该加一个随机句子推荐，这样可以让</summary>
-      
-    
-    
-    
-    
-    <category term="博客技术" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
